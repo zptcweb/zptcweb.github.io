@@ -68,5 +68,66 @@
 	<div class="f">
 		<div class="s"></div>
 	</div>
+
+
+<!-- 
+网页布局的时候，非常重要的原理（不仅仅要求记忆，最重要的是理解）
+	盒模型
+	浮动
+	定位
+
+盒模型
+	网页中的任何元素都是以盒子的形式存在
+	利用盒模型实现网页的布局，计算每个元素的空间
+
+	尺寸 width height
+	补白 padding margin
+		padding 内容和边框之间的距离
+		margin  边框外的距离，可以负值
+	边框 border
+
+	某个元素在网页中占的空间（边框内）
+		宽度=width+padding+border
+		高度=
+
+	某个元素在网页中占的空间（边框外）
+		宽度=width+padding+border+margin
+		高度=
+
+	兄弟状元素之间的距离（边框之间）计算
+		块状元素，默认（标准流、常规流）要占一行，竖着排  header p div ul li 
+			脱离标准流的方式，浮动、定位（固定、绝对定位）
+		
+		水平方向=margin之和=左侧的右margin+右侧的左margin    sum(a,b)
+
+		垂直方向=margin最大值=上侧的下margin和下侧的上margin之间的最大值  max(a,b)
+
+	父子块状元素之间的距离（边框之间计算）
+		
+		距离=父盒子的padding+子盒子的margin
+		
+		margin，塌陷margin
+			原因：当父盒子没有padding和border的时候，子盒子垂直方向的margin将会应用到父盒子上
+            修正：设置padding和border
+
+
+    行内元素（内联元素）空间计算
+    	内联元素，默认不占一行，  a em strong mark cite q big small sup sub var code samp span
+			默认情况下，没有宽和高，没有垂直方向的margin
+
+		水平距离（边框之间）= margin之和=左侧的右margin+右侧的左margin    sum(a,b)
+
+
+	网页里的空间（空白）怎么来
+		width height
+		padding
+		margin
+		白色的边框
+
+
+    css sprite
+    	background-position 
+
+-->
 </body>
 </html>
