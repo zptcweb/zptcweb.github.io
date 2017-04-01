@@ -1,0 +1,50 @@
+body{
+	margin: 0;
+}
+.k{
+	width:200px;
+	height: 200px;
+	background-color: #030;
+	border: 10px solid #000;
+	color: #fff;
+	padding: 20px 30px 40px 50px;
+	/*
+	上  右  下  左
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	*/
+/*	margin: 20px;*/
+	/*左浮动，脱离标准流*/
+	/*float: left;*/
+}
+.k1{
+	margin: 20px;
+}
+.k2{
+	margin: 10px;
+}
+
+.f{
+	width: 300px;
+	height: 300px;
+	border: 1px solid #000;
+	padding: 10px;
+	margin: 20px;
+}
+.f .s{
+	width: 100px;
+	height: 100px;
+	border: 1px solid #000;
+	margin: 20px;
+}
+
+.t{
+	width: 200px;
+	height: 100px;
+	padding: 20px;
+	margin: 10px 20px 30px 40px;
+	border: 1px solid #000;
+	/*display: inline-block;*/
+}

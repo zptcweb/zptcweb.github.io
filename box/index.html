@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+	<!-- 
+		盒模型
+			任何元素在网页中都是以盒子的形式存在的
+			利用盒模型原理去探究元素在网页中占的空间
+			
+			尺寸(width height)
+			补白（内补白和外补白padding、margin）
+				padding 容器里内容和边框之间的距离
+			边框 border
+
+			某个容器在页面中的空间怎么计算（默认情况下）
+				宽（边框里）=左边框的宽度+左padding的宽度+width+右padding的宽度+右边框的宽度
+				            =width+padding+border
+				宽（占用空间）=左边的margin+左边框的宽度+左padding的宽度+width+右padding的宽度+右边框的宽度+右margin
+							  =width+padding+border+margin
+
+			两个块元素水平方向的距离(边框之间)怎么算
+				块元素，默认占一行，可以使用浮动的方式 脱离标准流（两个元素占一行）
+				
+				边框之间的距离=左元素的右margin+右元素左margin  
+				sum(margin1,margin2)
+
+			两个块元素垂直方向的距离(边框之间)怎么算
+				
+				边框之间的距离=上元素的下margin和下元素的上margin之间的较大的值  max(margin1,margin2)
+
+			父子元素之间的距离(边框之间)怎么算
+
+				父子盒子边框之间的距离=父盒子的padding+子盒子的margin
+			
+			行内元素的盒子之间的距离（边框之间）怎么算
+				行内元素（内联元素），不要单独占一行  a  em strong span i b s u big small mark cite q
+				默认没有宽和高，默认没有垂直方向的margin
+
+			    边框之间的水平距离=左元素的右margin+右元素的左margin
+					
+				特别注意，因为内联元素的“缺陷”，一般很少直接把内联元素放到body（布局）里面去，
+				                                一般会先放到一个容器（块状元素）里，再放到body里去。
+			
+
+	 -->
+	 <!-- 兄弟块元素 -->
+	 <div class="k k1">一些文字</div>
+	 <div class="k k2">另一些文字</div>
+	<!-- 父子块元素 -->
+	 <div class="f">
+	 	<div class="s"></div>
+	 </div>
+	<!-- 兄弟内联元素 -->
+	 <span class="t">一些字</span><span class="t">一些字</span>
+
+	<!-- margin方面，著名bug，margin塌陷
+		当父盒子没有padding和border的时候，子盒子的垂直方向的margin回附加到父盒子上
+			设置padding和border
+
+		做网页的时候，100%用到
+	-->
+
+
+	<div class="f">
+		<div class="s"></div>
+	</div>
+</body>
+</html>
