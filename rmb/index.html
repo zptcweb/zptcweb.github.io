@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			table{
+				border-collapse: collapse;
+				border: 1px solid rgba(0,0,0,.3);
+				box-shadow: 2px 2px 10px 0 rgba(0,0,0,.8);
+				max-width: 800px;
+			}
+			th,td{
+				border: 1px solid rgba(0,0,0,.2);
+				text-align: center;
+			}
+			td img{
+				max-width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>五套人民币共有1元、5元、10元、20元、50元、100元6种面额，其中1元有纸币、硬币2种。</p>
+		<table>
+			<caption>第五套人民币</caption>
+			<thead>
+				<tr>
+					<th>币种</th>
+					<th>正面图</th>
+					<th>背景图</th>
+					<th>花卉图案</th>
+					<th>背面图案</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1元</td>
+					<td><img src="img/f01.jpg" data-zoom-image="img/f01.jpg"></td>
+					<td><img src="img/f02.jpg"  data-zoom-image="img/f02.jpg"></td>
+					<td>兰花</td>
+					<td>三潭印月（杭州西湖）</td>
+				</tr>
+				<tr>
+					<td>5元</td>
+					<td><img src="img/e01.jpg"  data-zoom-image="img/e01.jpg"></td>
+					<td><img src="img/e02.jpg"  data-zoom-image="img/e02.jpg"></td>
+					<td>水仙</td>
+					<td>泰山</td>
+				</tr>
+				<tr>
+					<td>10元</td>
+					<td><img src="img/d01.jpg"  data-zoom-image="img/d01.jpg"></td>
+					<td><img src="img/d02.jpg" data-zoom-image="img/d02.jpg"></td>
+					<td>月季</td>
+					<td>夔门(瞿塘关,长江三峡)</td>
+				</tr>
+				<tr>
+					<td>20元</td>
+					<td><img src="img/c01.jpg"  data-zoom-image="img/c01.jpg"></td>
+					<td><img src="img/c02.jpg" data-zoom-image="img/c02.jpg"></td>
+					<td>荷花</td>
+					<td>桂林山水</td>
+				</tr>
+				<tr>
+					<td>50元</td>
+					<td><img src="img/b01.jpg"  data-zoom-image="img/b01.jpg"></td>
+					<td><img src="img/b02.jpg"  data-zoom-image="img/b02.jpg"></td>
+					<td>菊花</td>
+					<td>布达拉宫</td>
+				</tr>
+				<tr>
+					<td>100元</td>
+					<td><img src="img/a01.jpg"  data-zoom-image="img/a01.jpg"></td>
+					<td><img src="img/a02.jpg"  data-zoom-image="img/a02.jpg"></td>
+					<td>梅花</td>
+					<td>人民大会堂</td>
+				</tr>
+			</tbody>
+		</table>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/jquery.elevatezoom.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('td img').elevateZoom();
+		</script>
+	</body>
+</html>
