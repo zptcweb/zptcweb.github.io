@@ -1,0 +1,43 @@
+html{
+	box-sizing:border-box;
+	-webkit-animation:run 2s;
+	        animation:run 2s;
+	-webkit-transition:all .5s;
+	transition:all .5s;
+}
+*{
+	box-sizing:inherit;
+}
+body{
+	padding: 0;
+	margin: 0;
+}
+.k{
+	width: 200px;
+	height: 200px;
+	/*padding: 20px;*/
+	border: 10px solid #f00;
+	outline: 10px solid #0f0;
+	/*outline-offset:10px;*/
+	margin: 30px;
+	/*overflow: auto;*/
+	overflow-x:auto;
+	overflow-y: hidden;
+	resize:both;
+}
+/*.k img{
+	width: 100px;
+	transition:all 1s;
+}
+.k:hover img{
+	width: 300px;
+}*/
+.l{
+	width: 1000px;
+	height: 100px;
+	padding: 10px;
+	margin: 10px;
+	/*display: none;*/
+	/*visibility: hidden;*/
+	cursor: row-resize;
+}
