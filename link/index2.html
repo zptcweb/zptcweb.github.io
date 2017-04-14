@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -42,8 +42,8 @@
 				text-decoration: none;
 				border-bottom: 1px solid #006600;
 				padding-bottom: 2px;
-				position: relative;
-				top: 0px;
+				/*position: relative;
+				top: 0px;*/
 				transition: all .2s;
 			}
 			a:visited{
@@ -55,7 +55,7 @@
 				color: #f00;
 				background-color: #fff;
 				border-bottom: none;
-				top: -2px;
+				/*top: -2px;*/
 			}
 			a:active{
 				color: #00f;
@@ -115,11 +115,32 @@
 			a[href^="//"]:not([href*="//127.0.0.1:8020/"])::after{
 				content: "";
 				position: absolute;
-				right: -10px;
-				top: -10px;
-				width: 30px;
-				height: 30px;
-				background: url(img/Icon_External_Link.svg) right center no-repeat;
+				width: 20px;
+				height: 20px;
+				background: url(img/Icon_External_Link.svg) right bottom no-repeat;
+			}
+			/*做高光效果*/
+			a.highlighter{
+				color: #011f28;
+				position: relative;
+				background: transparent;	
+				text-decoration: none;
+				border-bottom: none;			
+			}
+			a.highlighter::before{
+			    position: absolute;
+			    left: 0;
+			    top: 0;
+			    bottom: 0;
+			    right: 100%;
+			    background: #ECBE13;
+			    z-index: -1;
+			    content: "";
+			    -webkit-transition: right 0.25s;
+			    transition: right 0.25s;
+			}
+			a.highlighter:hover::before{
+				right: 0;
 			}
 		</style>
 	</head>
@@ -136,5 +157,7 @@
 		<a href="abc.zip">zip</a>
 		<a href="abc.doc">doc</a>
 		<a href="abc.pdf">pdf</a>
+		
+		<a href="#" class="highlighter">高光</a>
 	</body>
 </html>
