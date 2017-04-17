@@ -7,29 +7,42 @@
 		<link rel="stylesheet" href="css/normalize.css" />
 		<style>
 		/*
-		 css重置
-		 	不同的浏览器对应元素的默认样式不一致
-		 	做我们的样式之前，我们往往把这些样式统一化，例如置零(reset.css),例如统一（normalize.css）
-		 
-		 http://cssreset.com/
-		 
-		 注意，一定要把重置文件放在你的css文件前面。
-		 
-		 列表属性
-		 list-style 复合属性
-		 	list-style-type      类型
-		 	list-style-position  位置
-		 	list-style-image     图片
-		 	
-		 菜单
+CSS重置
+	不同的浏览器在处理元素的时候，往往会赋予不同的默认值
+	在做我们的样式之前，先把不同的浏览器统一化
+		置零   reset 			Eric Meyer’s “Reset CSS”
+		统一处理，不置零 			Normalize.css                温和一些       用的较多
+	
+	head部分里面先放重置，再放你的css
+	
+CDN 内容分发网络
+	在使用一些公用的CSS、JS等功能文件，直接调用存在别人服务器上的代码
+	
+	好处
+		省服务空间
+		加载比较快
+		利用缓存
+	
+	缺点
+		你的网站要依赖于cdn网站
+列表
+	list-style 复合属性
+		list-style-type 类型
+		list-style-position 位置
+		list-style-image 图像
+	ul默认值（高级浏览器里）
+		margin:16px 0;
+		padding:0 0 0 40px;
 		
-		书写CSS的顺序
-		 	先全局，再具体
-		 	从上往下
-		 	
-		 内联元素缺陷，宽和高，竖直方向的margin
-		 
-		绝对定位的基准：最近的定位祖先元素
+		可以利用list-style-type属性在ul ol之间进行切换	 
+
+书写CSS的顺序
+ 	先全局，再具体
+ 	从上往下
+ 	
+ 内联元素缺陷，宽和高，竖直方向的margin
+ 
+绝对定位的基准：最近的定位祖先元素
 		
 		 * */
 		/*body{
