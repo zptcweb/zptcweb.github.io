@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>列表样式和菜单的实现</title>
+		<!--<link rel="stylesheet" type="text/css" href="css/reset.css"/>-->
+		<link rel="stylesheet" href="css/normalize.css" />
+		<style>
+		/*
+		 css重置
+		 	不同的浏览器对应元素的默认样式不一致
+		 	做我们的样式之前，我们往往把这些样式统一化，例如置零(reset.css),例如统一（normalize.css）
+		 
+		 http://cssreset.com/
+		 
+		 注意，一定要把重置文件放在你的css文件前面。
+		 
+		 列表属性
+		 list-style 复合属性
+		 	list-style-type      类型
+		 	list-style-position  位置
+		 	list-style-image     图片
+		 	
+		 菜单
+		
+		书写CSS的顺序
+		 	先全局，再具体
+		 	从上往下
+		 	
+		 内联元素缺陷，宽和高，竖直方向的margin
+		 
+		绝对定位的基准：最近的定位祖先元素
+		
+		 * */
+		/*body{
+			padding: 0;
+			margin: 0;
+		}*/
+			ul{
+				list-style-type: circle;
+				width: 200px;
+				/*padding: 0;*/
+				/*list-style-position: inside;*/
+				/*list-style-type: lower-alpha;*/
+				list-style-image: url(img/dian_hover.gif);
+			}
+		</style>
+	</head>
+	<body>
+<!--
+	ul ol dl
+	ul ol  li
+-->
+<ul>
+	<li>内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1</li>
+	<li>内容2内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1</li>
+	<li>内容3内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1</li>
+</ul>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+/*
+ 书写CSS的顺序
+ 	先全局，再具体
+ 	从上往下
+ 	
+ 内联元素缺陷，宽和高，竖直方向的margin
+ * */
+body{
+	background-color: #ddd;
+}
+.verticalMenu{
+	width: 200px;
+	margin: 100px auto;
+	background-color: #fff;
+}
+/*重置里已经写过
+.verticalMenu ul{
+	padding: 0;
+	list-style-type: none;
+}
+*/
+/*.verticalMenu ul li a{
+	display: block;
+	text-decoration: none;
+	color: #000;
+	padding: 20px;
+	border-left: 10px solid #BAC358;
+	transition:all .5s;
+}
+.verticalMenu ul li:nth-child(2) a{
+	border-left: 10px solid #62BDCF;
+}
+
+.verticalMenu ul li:nth-child(3) a{
+	border-left: 10px solid #E05735;
+}
+.verticalMenu ul li:nth-child(4) a{
+	border-left: 10px solid #af821b;
+}
+.verticalMenu ul li:nth-child(5) a{
+	border-left: 10px solid #837D63;
+}
+.verticalMenu ul li a:hover{
+	border-left-width: 200px;
+	text-indent: -185px;
+}*/
+.verticalMenu ul li a{
+	display: block;
+	text-decoration: none;
+	color: #000;
+	padding: 20px;
+	position: relative;
+	z-index: 1;
+}
+.verticalMenu ul li a::before{
+	content: "";
+	display: block;
+	width: 10px;
+	height: 56px;
+	background-color: #BAC358;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition:all .5s;
+	z-index: -1;
+}
+.verticalMenu ul li:nth-child(2) a::before{
+	background-color: #62BDCF;
+}
+
+.verticalMenu ul li:nth-child(3) a::before{
+	background-color: #E05735;
+}
+.verticalMenu ul li:nth-child(4) a::before{
+	background-color: #af821b;
+}
+.verticalMenu ul li:nth-child(5) a::before{
+	background-color: #837D63;
+}
+.verticalMenu ul li:hover a::before{
+	width: 200px;
+}
