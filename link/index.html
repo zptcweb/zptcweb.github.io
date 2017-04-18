@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>超链接相关的CSS特性</title>
+		<style>
+			/*未被访问时的样式*/
+			a:link{
+				color: #f00;
+				text-decoration: none;
+				border-bottom: 1px dashed #000;
+			}
+			/*
+			 * 访问之后的样式
+			 * 	本样式设置有限制，只允许改变颜色（color）、背景颜色（background-color）、边框颜色(border-color)、轮廓颜色(outline-color)
+			 *	绝大多数情况下，不再单独设置visited属性
+			 */
+			a:visited{
+				color: #f00;
+				/*color: #ccc;*/
+			}
+			/*鼠标悬停时的样式*/
+			a:hover{
+				color: #00f;
+				/*text-decoration: underline;*/
+				border-bottom: 2px solid #000;
+			}
+			/*鼠标激活时的样式，鼠标摁下没有弹起时的状态*/
+			a:active{
+				color: #f0f;
+			}
+			/*
+			设置超链接属性的时候，记住顺序
+			 	link visited hover active
+			 	love hate 爱 恨
+			hover active不仅仅可以用在超链接上，也可以用在其他元素上。
+			 * */
+			
+			/*属性选择符的应用*/
+			a[download]{
+				padding: 10px;
+				border: 1px solid #000;                                                                                                                                                                                                                                                                                                                                                                                       
+			}
+			/*外链的实现*/
+			a:not([href*="//127.0.0.1:8020/"]){
+				position: relative;
+				margin-right: 30px;
+			}
+			a:not([href*="//127.0.0.1:8020/"])::after{
+				/*border-right: 1px solid #f00;*/
+				content: "";
+				width: 20px;
+				height: 20px;
+				display: inline-block;
+				position: absolute;
+				background: url(https://zptcsoft.github.io/ppt/demos/img/Icon_External_Link.svg) right center no-repeat;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<a href="//www.baidu.com">百度</a>
+		
+		<a href="//http://127.0.0.1:8020/#">ddd</a>
+		
+		<a href="//http://127.0.0.1:8020/#">ddddddd</a>
+		
+		<a href="//sohu.com">sohu</a>
+		
+		<br />
+		
+		<a href="abc.txt" download="download">abc</a>
+	</body>
+</html>

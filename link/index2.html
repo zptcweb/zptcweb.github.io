@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>超链接样式设置</title>
+		<style>
+			/*
+			 四个伪类选择符 设置超链接样式
+			 :link      未被访问的超链接样式
+			 :visited   访问过的超链接样式
+			 	访问过的样式有限制，只能改变color、background-color、border-color、outline-color四个属性
+			 	绝大多数情况下，不单独设置该属性，往往和其他状态合并设置
+			 :hover     元素悬停时的样式
+			 	不仅仅对超链接有效，其他元素也可以
+			 :active    元素激活时样式
+			 	不仅仅对超链接有效，其他元素也可以
+			 	
+			固定顺序
+			 love hate（爱恨 辅助记忆）
+			 可以适当的合并，例如下面代码
+				a:link,a:visited{
+					
+				}
+				a:hover{
+					
+				}
+				a:active{
+					
+				}
+			
+			 行内元素（内联元素）默认没有宽和高，没有竖直方向的margin
+			 
+			 单行文本的垂直居中   line-height=height
+			 
+			属性选择符
+				
+			
+			 * */
+			a:link{
+				color: #060;
+				background-color: #fff;
+				text-decoration: none;
+				border-bottom: 1px solid #006600;
+				padding-bottom: 2px;
+				/*position: relative;
+				top: 0px;*/
+				transition: all .2s;
+			}
+			a:visited{
+				/*color: #6f6;*/
+				/*border-bottom: none;*/
+				background-color: #aaa;
+			}
+			a:hover{
+				color: #f00;
+				background-color: #fff;
+				border-bottom: none;
+				/*top: -2px;*/
+			}
+			a:active{
+				color: #00f;
+			}
+			
+			.k{
+				width: 100px;
+				height: 100px;
+				background-color: #f00;
+				margin: 30px;
+				border-radius: 10px;
+				transition: all 1s;
+			}
+			/*
+			 * 悬停时的状态
+			 * 		默认，会在两个状态之间进行切换（很快）
+			 * 		通过设置transition属性进行过渡的设置
+			 */
+			.k:hover{
+				background-color: #00f;
+				border-radius: 0px;
+				cursor: pointer;
+			}
+			
+			/*按钮式的超链接*/
+			a.btn{
+				display: inline-block;
+				width: 100px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				background-color: #ddd;
+				border-bottom: none;
+				transition: all 1s;
+			}
+			a.btn:hover{
+				color: #fff;
+				background-color: #000;
+			}
+			
+			/*利用属性选择符进行超链接样式设置*/
+			a[href]{
+				/*border: 1px solid #000;*/
+			}
+			a:not([href]){
+				display: none;
+			}
+			a[href$=".pdf"]{
+				padding-left: 30px;
+				background: url(img/pdf.png) left top no-repeat;
+				background-size: 20px 20px;
+			}
+			a[href^="//"]:not([href*="//127.0.0.1:8020/"]){
+				position: relative;
+				margin-right: 30px;
+			}
+			a[href^="//"]:not([href*="//127.0.0.1:8020/"])::after{
+				content: "";
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				background: url(img/Icon_External_Link.svg) right bottom no-repeat;
+			}
+			/*做高光效果*/
+			a.highlighter{
+				color: #011f28;
+				position: relative;
+				background: transparent;	
+				text-decoration: none;
+				border-bottom: none;			
+			}
+			a.highlighter::before{
+			    position: absolute;
+			    left: 0;
+			    top: 0;
+			    bottom: 0;
+			    right: 100%;
+			    background: #ECBE13;
+			    z-index: -1;
+			    content: "";
+			    -webkit-transition: right 0.25s;
+			    transition: right 0.25s;
+			}
+			a.highlighter:hover::before{
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="//www.baidu.com">百度</a>
+		<a href="ff.img">img</a>
+		<a href="//sohu.com" class="btn">搜狐</a>
+		<div class="k"></div>
+		
+		
+		<a href="#a">第a部分</a>
+		<a id="a">滴答滴答</a>
+		
+		<a href="abc.zip">zip</a>
+		<a href="abc.doc">doc</a>
+		<a href="abc.pdf">pdf</a>
+		
+		<a href="#" class="highlighter">高光</a>
+	</body>
+</html>

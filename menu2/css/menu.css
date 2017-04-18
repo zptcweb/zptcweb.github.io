@@ -1,0 +1,46 @@
+/*
+ 图标菜单的实现
+ * */
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+	width: 0;
+	height: 0;
+	font-size: 0;
+}
+.menu{
+	width: 800px;
+	margin: 100px auto;
+}
+.menu ul{
+	padding: 0;
+}
+.menu ul li{
+	float: left;
+	list-style-type: none;
+	margin: 0px 3px;
+}
+.menu ul li a{
+	display: block;
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #3498db;
+	color: #fff;
+	text-decoration: none;
+}
+.menu ul li a i{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: #2980b9;
+	text-align: center;
+	line-height: 40px;
+	margin-right: 20px;
+	font-size: 20px;
+	transition:all .5s;
+}
+.menu ul li a:hover i{
+	width: 90px;
+}

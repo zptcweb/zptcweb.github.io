@@ -1,0 +1,53 @@
+/*重置*/
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	padding: 0;
+	margin: 0;	
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+/*布局*/
+#wrapper{
+	max-width: 1200px;
+	min-width: 800px;
+	margin: auto;
+}
+header,footer{
+	border: 1px solid #9df;
+	margin: 1% 0;
+	height: 120px;
+}
+aside,main{
+	border: 1px solid #9df;
+}
+section,aside,main{
+	min-height: 500px;
+}
+aside{
+	width: 240px;
+	float: left;
+}
+main{
+	width: auto;
+	margin-left: 250px;
+}
+
+/*header*/
+header h1{
+	margin: 10px 14px;
+}
+header ul{
+	list-style-type: none;
+	margin: 30px 0 0 14px;
+	padding: 0;
+}
+header li{
+	float: left;
+}

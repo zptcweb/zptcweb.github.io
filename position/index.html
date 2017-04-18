@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+		.clearfix::after{
+			content: "";
+			display: block;
+			clear: both;
+			width: 0;
+			height: 0;
+			font-size: 0;
+		}
+			body{
+				padding: 0;
+				margin: 0;
+			}
+			.ff{
+				margin: 30px;
+				padding: 20px;
+				border: 1px solid #f00;
+				/*position: relative;*/
+			}
+			.f{
+				border: 1px solid #000;
+				float: left;
+				margin: 20px;
+				position: relative;
+			}
+			.f .s{
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			}
+			.f .s:nth-child(1){
+				background-color: #f00;
+			}
+			.f .s:nth-child(2){
+				background-color: #0f0;
+				/*position: relative;
+				right: 20px;
+				bottom: 20px;*/
+				/*position: absolute;
+				left: 50px;
+				top: 50px;*/
+				/*position: fixed;
+				right: 20px;
+				bottom: 30px;*/
+				position: center;
+			}
+			.f .s:nth-child(3){
+				background-color: #00f;
+			}
+			h2{
+				text-align: center;
+			}
+			.k{
+				width: 300px;
+				height: 50px;
+				margin: 30px auto 40px;
+				background-color: #0ff;
+			}
+			
+			.kk{
+				border: 1px solid #000;
+				width: 400px;
+				height: 400px;
+				margin: 10px;
+				position: relative;
+			}
+			.kkk{
+				width: 200px;
+				height: 200px;
+				background-color: #0ff;
+				/*position: absolute;
+				left: 50%;
+				top: 50%;
+				margin:-100px 0 0 -100px;*/
+				margin: auto;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+			}
+		</style>
+	</head>
+	<body>
+<!--
+	常规流
+		块状元素 默认宽 100% 高 auto
+	脱离常规流的方式
+		浮动
+			块状元素 宽 auto 高 auto
+		
+		绝对定位和固定定位
+		
+	定位
+		static  静态定位，默认值。
+			left right top bottom四个值无效
+		relative  相对定位
+			不脱离标准流
+			可以根据left right top bottom进行偏移，偏移的参考点是该元素原来的位置
+			可以覆盖标准流里的元素
+		absolute 绝对定位
+			脱离常规流
+			可以根据left right top bottom进行偏移
+				偏移的参考点是，最近的定位祖先元素
+					祖先元素  某元素的包含元素
+					定位元素  某元素设置过position属性，并且值不是static
+					最近的      亲缘关系最近的
+			可以覆盖标准流里的元素
+		fixed	固定定位
+			脱离常规流
+			可以根据left right top bottom进行偏移，偏移的参考点是浏览器窗口
+			可以覆盖标准流里的元素	
+			
+		center CSS3
+		page   CSS3
+		sticky CSS3
+		
+			polyfill补丁，利用JS实现给老的浏览添加新特性支持
+	
+	居中
+		文字(行内元素)的水平居中  
+			text-align:center;
+		块元素的水平居中 
+			设置width，值不是auto
+			水平方向的margin为auto
+		块元素的水平垂直居中
+			1. 绝对定位  left top 50%
+			   margin进行偏移，设置为负值，是宽和高的一半
+			2. margin：auto
+			   position：absolute
+			   left right top bottom设置为0
+	
+	浮动和定位的应用场合
+		1. 如果常规流能实现，尽量不要脱离常规流
+		2. 如果浮动能实现的，尽量不用定位
+			因为浮动的后续影响可以清除掉，而定位不可以
+		3. 固定定位， 
+			如果某元素相对于浏览器位置固定不变
+		4. 浮动，
+			如果好些元素需要同时脱离常规流，用浮动。
+			浮动向左，向右浮动
+		5. 绝对定位，
+			某个元素，某几个元素的位置需要特殊设置（没有在行和列里）
+		6. 相对定位
+			很少用，几乎不用
+			常用在，使某个元素成为 定位元素
+			如果说某个元素里发现  position: relative; 而同时没有设置left right top bottom四个值，  该句话的功能就是让其成为定位元素
+-->
+	<div class="ff clearfix">
+		<div class="f">
+			<div class="s">a</div>
+			<div class="s">b</div>
+			<div class="s">c</div>
+		</div>
+	</div>
+	<h2>二号标题</h2>
+	<div class="k"></div>
+	
+	<div class="kk">
+		<div class="kkk"></div>
+	</div>
+	</body>
+</html>

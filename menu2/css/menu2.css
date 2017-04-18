@@ -1,0 +1,73 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+	width: 0;
+	height: 0;
+	font-size: 0;
+}
+body,ul{
+	padding: 0;
+	margin: 0;
+}
+.menu{
+	background: orange;
+	font-size: 16px;
+  	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  	text-align: center;
+  	height: 48px;
+}
+.menu ul{
+	display: inline-block;
+	margin: auto;
+}
+.menu li{
+	list-style-type: none;
+	float: left;
+	position: relative;
+}
+.menu li a{
+	font-family: "微软雅黑";
+	text-align: left;
+	display: inline-block;
+	text-decoration: none;
+	color: #000;
+	min-width: 200px;
+	min-height: 48px;
+	text-indent: 30px;
+	line-height: 48px;
+	border-right: solid 1px rgba(0, 0, 0, 0.2);
+	transition:text-indent .6s;
+}
+.menu li a:first-child{
+	border-left: solid 1px rgba(0, 0, 0, 0.2);
+}
+.menu li:hover a{
+	color: #fff;
+	text-indent: 50px;
+}
+.menu li::before{
+	content: "";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 24px;
+    height: 24px;
+    font-family: FontAwesome;
+    font-size: 24px;
+    color: #fff;
+    transform: scale(0);
+    transition:all .6s;
+}
+.menu li:hover::before{
+	transform: scale(1);
+}
+.menu li:nth-child(1)::before{
+	content: "\f015";
+}
+.menu li:nth-child(2)::before{
+	content: "\f007";
+}
+.menu li:nth-child(3)::before{
+	content: "\f0e0";
+}

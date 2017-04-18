@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body{
+				padding: 0;
+				margin: 0;
+			}
+			.page{
+				width: 1000px;
+				min-height: 800px;
+				border: 1px solid #000;
+				margin: auto;
+			}
+			.content{
+				/*height: 400px;*/
+				border: 1px solid #000;
+			}
+			.content div{
+				width: 200px;
+				height: 200px;
+				margin: 20px;
+			}
+			.content div:nth-child(1){
+				width: 300px;
+				height: 300px;
+				border: 1px solid #f00;
+				float: left;
+			}
+			.content div:nth-child(2){
+				border: 1px solid #0f0;
+				float: right;
+			}
+			.content div:nth-child(3){
+				border: 1px solid #00f;
+				float: left;
+			}
+			.content .clear{
+				clear: both;
+				width: 0;
+				height: 0;
+			}
+			.clearfix::after{
+				content: "122";
+				display: block;
+				clear: both;
+				width: 0;
+				height: 0;
+				font-size: 0;
+			}
+		</style>
+	</head>
+	<body>
+<!--
+	（标准流，常规流）默认情况下，
+		块元素占一行，从上往下依次排列
+			如果没有设置样式，默认宽100%，高0
+		行内元素不占一行，从左往右依次排列，从上往下排列
+	
+	如果说要实现复杂的网页，好些时候需要打破标准流（不打破也能实现，尽量不要打破）
+	
+	如果打破标准流
+		浮动
+			可以脱离标准流
+				当某个元素脱离常规流之后，他的后兄弟元素和父元素会认为他不在网页里了。
+			向左向右浮动
+				浮动上一个浮动的兄弟元素边缘
+				如果没有上一个浮动的兄弟元素，浮动到父元素边缘
+		
+			浮动会对后续的元素产生影响，记住如果浮动，一定清除
+				在产生浮动元素的后面，新建一个div，该div上设置clear
+				.clearfix::after
+				
+				
+		float
+			left
+			right
+			none
+		
+		clear 
+			left
+			right
+			both
+		
+		绝对定位和固定定位
+		
+	当我们布局一个网页的时候，大容器一定要用块元素实现（行内元素缺陷）
+	
+	CSS优先级	越具体优先级越高
+	
+	
+	皇帝
+		大儿子（太子）->被贬
+		二儿子（太子）
+		三儿子
+-->
+	<div class="page">
+		<header>头部</header>
+		<section class="content clearfix">
+			<div>11</div>
+			<div>22</div>
+			<div>33</div>
+		</section>
+		<footer>footer</footer>
+	</div>
+	</body>
+</html>
