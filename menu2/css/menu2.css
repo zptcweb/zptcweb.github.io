@@ -1,3 +1,4 @@
+@charset "utf-8";
 .clearfix::after{
 	content: "";
 	display: table;
