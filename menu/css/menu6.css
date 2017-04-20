@@ -1,0 +1,73 @@
+:root{
+  --item-width: 100px;
+  --bg-color:rgba(100,180,100,.6);
+  --bg-color2:rgba(100,200,100,.8);
+  --active-color:rgba(80,160,80,.6);
+}
+*{
+  box-sizing: border-box;
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.menu{
+	text-align: center;
+}
+.menu ul{
+	list-style-type: none;
+	padding: 0;
+	background:linear-gradient(var(--bg-color),var(--bg-color2));
+	display: inline-block;
+	position: relative;
+}
+.menu li{
+	float: left;
+	position: relative;
+}
+.menu li a{
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	/*padding: 10px 50px;*/
+	width: var(--item-width);
+	text-align: center;
+	padding: 10px 0;
+	transition: color .5s;
+}
+.menu li a:hover{
+	color: #000;
+}
+.menu li ul{
+	position: absolute;
+	left: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition:max-height .5s;
+}
+.menu li:hover ul{
+	max-height: 300px;
+}
+.menu li ul li a{
+	word-break: keep-all;
+	padding: 10px 15px;
+}
+.menu li ~ .marker{
+	width: var(--item-width);
+	height: 4px;
+	background-color: var(--active-color);
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: left .5s;
+}
+.menu li:nth-of-type(2):hover ~ .marker{
+	left: 100px;
+}
+.menu li:nth-of-type(3):hover ~ .marker{
+	left: 200px;
+}
+.menu li:nth-of-type(4):hover ~ .marker{
+	left: 300px;
+}
