@@ -13,67 +13,94 @@
 	clear: both;
 }
 .menu{
-	text-align: center;
+	max-width: 980px;
+	margin: 100px auto;
+	height: 48px;
+	background: linear-gradient(#fff,#ccc);
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.2);
+	border-radius: 6px;
 }
 .menu ul{
 	list-style-type: none;
-	padding: 0;
-	/*background:linear-gradient(var(--bg-color),var(--bg-color2));*/
-	background:linear-gradient(rgba(100,180,100,.6),rgba(100,200,100,.8));
-	display: inline-block;
 	position: relative;
 }
-.menu li{
+.menu ul li{
 	float: left;
+	/*margin: 0 1em;*/
 	position: relative;
+	z-index: 2;
 }
 .menu li a{
 	text-decoration: none;
-	color: #fff;
+	color: #333;
+	
 	display: inline-block;
-	/*width: var(--item-width);*/
+	/*padding: 0.5em 1em 0.5em 0.5em;
+	margin: .4em 0;*/
 	width: 100px;
+	height: 48px;
 	text-align: center;
-	padding: 10px 0;
-	transition: color .5s;
+	line-height: 48px;
 }
-.menu li a:hover{
+.menu li:hover a,
+.menu li.active a{
 	color: #000;
 }
+.menu li i{
+	font-size: 1.2em;
+	margin: 0 .5em;
+}
 .menu li ul{
+	padding: 0;
 	position: absolute;
-	left: 0;
 	max-height: 0;
 	overflow: hidden;
-	transition:max-height .5s;
+	transition: max-height 0.5s;
+	
+	background:linear-gradient(#fff,#ddd);
+	border-radius: 0 0 6px 6px;
+	box-shadow: inset 0px 0px 4px rgba(0,0,0,0.2);
+	
+	z-index: -1;
 }
 .menu li:hover ul{
-	max-height: 300px;
+	max-height: 200px;
 }
-.menu li ul li a{
+.menu li ul li{
+	float: none;
+	margin: 10px 6px;
+}
+.menu li ul li a,
+.menu li:hover ul li a{
+	height: 24px;
+	line-height: 24px;
+	text-align: left;
+	margin: 0;
+	padding: 0 1em;
 	word-break: keep-all;
-	padding: 10px 15px;
 }
 .menu li ~ .marker{
-	/*width: var(--item-width);*/
 	width: 100px;
-	height: 4px;
-	/*background-color: var(--active-color);*/
-	background-color:rgba(80,160,80,.6);
+	height: 30px;
+	background: linear-gradient(#eee, #fff);
+	box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,0.1);
+	border-radius: 12px;
 	position: absolute;
-	left: 0;
-	top: 0;
+	left: 40px;
+	top: 7px;
 	transition: left .5s;
+	z-index: 1;
 }
 .menu li:nth-of-type(2):hover ~ .marker{
-	/*left: var(--item-width);*/
-	left: 100px;
+	left: 140px;
 }
 .menu li:nth-of-type(3):hover ~ .marker{
-	/*left: calc(2*var(--item-width));*/
-	left: 200px;
+	left: 240px;
 }
 .menu li:nth-of-type(4):hover ~ .marker{
-	/*left: calc(3*var(--item-width));*/
-	left: 300px;
+	left: 340px;
 }
+.menu li:nth-of-type(5):hover ~ .marker{
+	left: 440px;
+}
+
