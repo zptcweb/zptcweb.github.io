@@ -16,8 +16,8 @@ body {
 .skew-menu ul li {
   background: #fff;
   float: left;
-  border-right: 1px solid #eee;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #ddd;
+  box-shadow:inset 0 0 6px rgba(0, 0, 0, 0);
   text-transform: uppercase;
   color: #555;
   font-weight: bolder;
@@ -32,7 +32,8 @@ body {
   border-radius: 0 7px 7px 0;
 }
 .skew-menu ul li:hover {
-  background: #eee;
+  background: #ddd;
+  box-shadow: inset 0 0 6px rgba(0,0,0,.1);
   color: tomato;
 }
 .skew-menu ul li a{
