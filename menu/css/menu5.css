@@ -37,7 +37,8 @@ body{
 	padding: 0.5em 1em 0.5em 0.5em;
 	margin: .4em 0;
 }
-.menu li:hover a{
+.menu li:hover a,
+.menu li.active a{
 	background: linear-gradient(#eee, #fff);
 	box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,0.1);
 	border-radius: 12px;
