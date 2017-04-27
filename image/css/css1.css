@@ -34,21 +34,21 @@
 .imageList figure figcaption{
 	content: "";
 	position: absolute;
-	top:30px;
-	bottom:30px;
-	left:30px;
-	right:30px;
+	top:20px;
+	bottom:20px;
+	left:20px;
+	right:20px;
 	border: 1px solid #ffffff;
 	overflow: hidden;
-	box-shadow: 0 0 0 30px rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.8);
 	z-index: 1;
 }
 .imageList figure:hover figcaption{
-	top:15px;
-	bottom:15px;
-	left:15px;
-	right:15px;
-	box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.4);
+	top:10px;
+	bottom:10px;
+	left:10px;
+	right:10px;
+	box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.4);
 }
 .imageList figure figcaption h3{
 	width: 100px;
