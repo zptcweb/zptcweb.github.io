@@ -58,12 +58,6 @@
 .imageList figure:hover figcaption{
 	background-color:rgba(0,0,0,.1);
 }
-.imageList figure figcaption h3{
-	font-size: 30px;
-	text-align: center;
-	margin: 10px;
-	color: #fff;
-}
 .imageList figure figcaption::before,
 .imageList figure figcaption::after{
 	content: "";
@@ -79,6 +73,18 @@
 .imageList figure figcaption::after{
 	right: 0;
 }
+
+.imageList figure:hover figcaption::before,
+.imageList figure:hover figcaption::after
+{
+	width: 20%;
+}
+.imageList figure figcaption h3{
+	font-size: 30px;
+	text-align: center;
+	margin: 10px;
+	color: #fff;
+}
 .imageList figure figcaption p{
 	text-align: center;
 	color: rgba(255,255,255,0);
@@ -86,9 +92,4 @@
 }
 .imageList figure:hover figcaption p{
 	color: rgba(255,255,255,1);
-}
-.imageList figure:hover figcaption::before,
-.imageList figure:hover figcaption::after
-{
-	width: 20%;
 }
