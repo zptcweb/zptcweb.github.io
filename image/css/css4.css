@@ -20,13 +20,9 @@
 	width: 30%;
 	float: left;
 	margin: calc(10%/6);
-	overflow: hidden;
 	position: relative;
 	cursor: pointer;
 	color: #fff;
-}
-.imageList figure:hover{
-
 }
 
 .imageList figure img{
