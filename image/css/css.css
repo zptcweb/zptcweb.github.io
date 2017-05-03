@@ -1,0 +1,12 @@
+.nav li{
+	float: left;
+	list-style-type: none;
+	margin: 0px 10px;
+}
+.nav li a{
+	text-decoration: none;
+	color: #000;
+}
+.nav li a:hover{
+	color: #003300;
+}

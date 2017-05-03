@@ -1,0 +1,98 @@
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.imageList {
+	max-width: 1200px;
+	margin: auto;
+}
+.imageList *,
+.imageList *::after,
+.imageList *::before{
+	box-sizing: border-box;
+	transition: all .5s ease;
+	padding: 0;
+	margin: 0;
+}
+.imageList figure{
+	width: 30%;
+	float: left;
+	margin: calc(10%/6);
+	position: relative;
+	cursor: pointer;
+	color: #fff;
+	overflow: hidden;
+}
+
+.imageList figure img{
+	vertical-align: top;
+	width: 100%;
+	backface-visibility: hidden;
+}
+
+.imageList figure figcaption{
+	z-index: 1;
+	background-color:rgba(0,0,0,0);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.imageList figure:hover figcaption{
+	background-color:rgba(0,0,0,.5);
+}
+.imageList figure figcaption::before,
+.imageList figure figcaption::after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	background-color: rgba(0,0,0,.5);
+	z-index: 3;
+}
+.imageList figure figcaption::before{
+	top: -20%;
+}
+.imageList figure figcaption::after{
+	bottom: -20%;
+}
+.imageList figure:hover figcaption::before{
+	top: 0;
+}
+.imageList figure:hover figcaption::after{
+	bottom: 0;
+}
+.imageList figure figcaption h3,
+.imageList figure figcaption p{
+	position: absolute;
+	width: 160px;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	opacity: 0;
+	transform: scale(0);
+	font-weight: normal;
+	font-family: "微软雅黑";
+}
+.imageList figure figcaption p{
+	top: 100px;
+	font-size: 0.8em;
+	transition-delay: .3s;
+}
+.imageList figure:hover figcaption h3{
+	opacity: 1;
+	transform: scale(1);
+}
+.imageList figure:hover figcaption p{
+	top: 50px;
+	opacity: 1;
+	transform: scale(1);
+}
