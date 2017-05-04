@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>带滚动条的表格</title>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<style type="text/css">
+			table *{
+				box-sizing: border-box;
+			}
+			table.scroll{
+				border-collapse: collapse;
+				border-spacing: 0;
+				max-width: 80%;
+				min-width: 400px;
+				position: relative;
+				margin: 50px auto;
+			}
+			table.scroll th,
+			table.scroll td{
+				height: 30px;
+				text-align: center;
+			}
+			table.scroll thead,
+			table.scroll tfoot,
+			table.scroll tbody>tr{
+				display: table;
+				width: 100%;
+				table-layout: fixed;
+			}
+			table.scroll thead{
+				position: absolute;
+				top: -30px;
+				border-bottom: 2px solid #000;
+			}
+			table.scroll tfoot{
+				position: absolute;
+				top: 100%;
+				border-top: 1px solid #000;
+			}
+			table.scroll tbody{
+				display: block;
+				max-height: 300px;
+				overflow: auto;
+			}
+			table.scroll tbody td:nth-child(3){
+				text-indent: 1em;
+			}
+			table.scroll tbody td:nth-child(4){
+				text-indent: 2em;
+			}
+			table.scroll tbody tr:nth-child(even){
+				background-color: #eeeeee;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="nav clearfix">
+			<li><a href="table1.html">效果1-细线表格</a></li>
+			<li><a href="table2.html">效果2-隔行变色</a></li>
+			<li><a href="table3.html">效果3-渐变背景色表格</a></li>
+			<li><a href="table4.html">效果4-横线表格</a></li>
+			<li><a href="table5.html">效果5-带滚动条的表格</a></li>
+		</ul>
+		<table class="scroll">
+			<thead>
+				<tr>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>年龄</th>
+					<th>班级</th>
+				</tr>
+			</thead>
+			<tfoot>
+		        <tr>
+		            <td colspan="4">*描述学生信息</td>
+		        </tr>
+		    </tfoot>
+			<tbody>
+				<tr>
+					<td>张三</td>
+					<td>男</td>
+					<td>20</td>
+					<td>软件251</td>
+				</tr>
+				<tr>
+					<td>赵四</td>
+					<td>女</td>
+					<td>18</td>
+					<td>软件252</td>
+				</tr>
+				<tr>
+					<td>王五</td>
+					<td>男</td>
+					<td>21</td>
+					<td>软件257</td>
+				</tr>
+				<tr>
+					<td>李六</td>
+					<td>男</td>
+					<td>20</td>
+					<td>软件256</td>
+				</tr>
+				<tr>
+					<td>田七</td>
+					<td>女</td>
+					<td>19</td>
+					<td>软件254</td>
+				</tr>
+				<tr>
+					<td>张十八</td>
+					<td>男</td>
+					<td>21</td>
+					<td>软件255</td>
+				</tr>
+								<tr>
+					<td>张三</td>
+					<td>男</td>
+					<td>20</td>
+					<td>软件251</td>
+				</tr>
+				<tr>
+					<td>赵四</td>
+					<td>女</td>
+					<td>18</td>
+					<td>软件252</td>
+				</tr>
+				<tr>
+					<td>王五</td>
+					<td>男</td>
+					<td>21</td>
+					<td>软件257</td>
+				</tr>
+				<tr>
+					<td>李六</td>
+					<td>男</td>
+					<td>20</td>
+					<td>软件256</td>
+				</tr>
+				<tr>
+					<td>田七</td>
+					<td>女</td>
+					<td>19</td>
+					<td>软件254</td>
+				</tr>
+				<tr>
+					<td>张十八</td>
+					<td>男</td>
+					<td>21</td>
+					<td>软件255</td>
+				</tr>
+								<tr>
+					<td>张三</td>
+					<td>男</td>
+					<td>20</td>
+					<td>软件251</td>
+				</tr>
+				<tr>
+					<td>赵四</td>
+					<td>女</td>
+					<td>18</td>
+					<td>软件252</td>
+				</tr>
+				<tr>
+					<td>王五</td>
+					<td>男</td>
+					<td>21</td>
+					<td>软件257</td>
+				</tr>
+				<tr>
+					<td>李六</td>
+					<td>男</td>
+					<td>20</td>
+					<td>软件256</td>
+				</tr>
+				<tr>
+					<td>田七</td>
+					<td>女</td>
+					<td>19</td>
+					<td>软件254</td>
+				</tr>
+				<tr>
+					<td>张十八</td>
+					<td>男</td>
+					<td>21</td>
+					<td>软件255</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
