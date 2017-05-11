@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单的使用</title>
+		<style>
+			body{
+				background: url(img/dark_wall.png);
+			}
+			.wrapper *{
+				box-sizing: border-box;
+			}
+			.wrapper{
+				width: 360px;
+				height: 280px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				text-align: center;
+			}
+			.wrapper h3{
+				color: #fff;
+			}
+			.wrapper p{
+				text-align: left;
+				color: #999;
+			}
+			.wrapper input{
+				width: 100%;
+				padding: 15px 0px 15px 8px;
+				outline: none;
+				border-radius: 5px;
+  				box-shadow: inset 4px 6px 10px 0px rgba(0, 0, 0, 0.3), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
+  				background: rgba(0, 0, 0, 0.2);
+  				border: 1px solid black;
+  				color: #fff;
+			}
+			.wrapper input+p.info{
+				margin: 5px 0;
+				max-height: 0px;
+				overflow-y: hidden;
+				transition: max-height 1s ease;
+			}
+			.wrapper input:focus+p.info{
+				max-height: 60px;
+			}
+			.wrapper input[type="submit"]{
+				color: #fff;
+				background-image: linear-gradient(#28D2DE 0%, #1A878F 100%);
+				border: none;
+				box-shadow: none;
+			}
+			.wrapper input[type="submit"]:hover{
+				background-image: linear-gradient(#55eeff 0%, #2b989f 100%);
+			}
+		</style>
+	</head>
+	<body>
+		<form action="#" method="post" class="wrapper">
+			<h3>注册账号</h3>
+			<p>欢迎大家通过注册账号加入我们，鼓励大家通过邮箱进行注册，这样我们可以很好地建立联系。</p>
+			<p>来吧，通过简单的几个步骤，加入我们吧。</p>
+			<input type="text" name="name" id="name" placeholder="名字" />
+			<p class="info">请输入您的姓名</p>
+			<input type="email" name="mail" id="mail" placeholder="邮箱" />
+			<p class="info">请确保输入有效邮箱</p>
+			<input type="submit" name="submit" id="submit" value="立刻注册" />
+		</form>
+	</body>
+</html>

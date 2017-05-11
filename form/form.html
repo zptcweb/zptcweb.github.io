@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+<!--
+	表单
+		用户输入数据的方式
+			注册、登陆、留言、搜索等模块
+	表单的标签
+		form 定义一个表单
+			method 定义用那种方式进行提交
+			action 用那个文件来处理提交
+			
+			如果要真正的实现提交，我们需要后端语言（php、jsp、node.js）
+		input 输入标签
+			不同的type类型（23），可以实现不同的效果
+				文本输入框
+				密码框
+				单选按钮
+				复选按钮
+				文件
+				
+				number
+				color
+				date
+				time
+		label 标签标签（他可以在label和input之间建立联系）
+-->
+	<form method="post" action="">
+		<label for="user">用户</label>
+		<input type="text" name="user" id="user" />
+		<label for="pwd">密码</label>
+		<input type="password" name="pwd" id="pwd" />
+		<input type="submit" name="submit" id="submit" value="注册" />
+	</form>
+	</body>
+</html>
