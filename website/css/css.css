@@ -1,0 +1,59 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background: url(../img/bg.jpg) center top fixed;
+	min-height: 1200px;
+}
+
+.wrapper{
+	max-width: 1200px;
+	margin: auto;
+}
+header{
+	position: relative;
+	margin: 30px 0px;
+	padding: 20px;
+	color: #fff;
+}
+.logo h1{
+	display: none;
+}
+.logo img{
+	width: 80px;
+	height: auto;
+}
+.mainNav{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.mainNav ul{
+	list-style-type: none;
+	padding: 0;
+}
+.mainNav ul li{
+	float: left;
+	margin: 20px 30px;
+}
+.mainNav ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 20px;
+	border: 1px solid transparent;
+	transition: all .5s;
+}
+.mainNav ul li a:hover{
+	color: #000;
+	border: 1px solid #fff;
+}
+header h2{
+	margin: 50px 0;
+	font-size: 30px;
+}
