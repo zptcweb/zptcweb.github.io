@@ -1,10 +1,21 @@
+/*
+ 公共设置
+ * */
+*{
+	box-sizing: border-box;
+}
 .clearfix::after{
 	content: "";
 	display: table;
 	clear: both;
 }
-*{
-	box-sizing: border-box;
+ul{
+	padding: 0;
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
 }
 
 body{
@@ -14,12 +25,12 @@ body{
 
 .wrapper{
 	max-width: 1200px;
+	padding: 20px;
 	margin: auto;
 }
 header{
 	position: relative;
 	margin: 30px 0px;
-	padding: 20px;
 	color: #fff;
 }
 .logo h1{
@@ -33,10 +44,6 @@ header{
 	position: absolute;
 	top: 0;
 	right: 0;
-}
-.mainNav ul{
-	list-style-type: none;
-	padding: 0;
 }
 .mainNav ul li{
 	float: left;
@@ -56,4 +63,16 @@ header{
 header h2{
 	margin: 50px 0;
 	font-size: 30px;
+}
+main{
+	color: #fff;
+}
+.fav li{
+	float: left;
+	width: 160px;
+	height: 48px;
+	text-align: center;
+	line-height: 48px;
+	background-color:rgba(100,100,200,.6);
+	margin: 10px 20px 0px 0px;
 }
