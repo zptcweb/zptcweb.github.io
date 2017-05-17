@@ -1,99 +1,102 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>tab选项卡实现</title>
 		<style type="text/css">
-			.clearfix::after{
+			.clearfix::after {
 				content: "";
 				display: table;
 				clear: both;
 			}
-			input{
+			
+			input {
 				display: none;
 			}
-			label{
+			
+			label {
 				display: inline-block;
 				width: 60px;
 				height: 30px;
-				line-height: 30px;
 				text-align: center;
+<<<<<<< HEAD
 				cursor: pointer;
+=======
+				line-height: 30px;
+				cursor: pointer;
+				transition: background .5s;
+>>>>>>> 043ca2256f34c4c10bc89b26e19b771f57ad35d5
 			}
-			.content *{
-				box-sizing: border-box;
-			}
-			.contents{
+			
+			#contents {
 				width: 600px;
 				height: 480px;
 				overflow: hidden;
 				position: relative;
-				border: 1px solid #000;
 			}
-			.contents .contentList{
+			
+			#contents #conList {
 				width: 1800px;
 				height: 480px;
 				position: absolute;
 				transition: left .5s;
 			}
-			.contents .contentList div{
+			
+			#contents #conList div {
 				float: left;
 				width: 600px;
 				height: 480px;
 			}
-			.contents .contentList div#con1{
+			
+			#contents #conList div#con1 {
 				background-color: #fdd;
 			}
-			.contents .contentList div#con2{
+			
+			#contents #conList div#con2 {
 				background-color: #dfd;
 			}
-			.contents .contentList div#con3{
+			
+			#contents #conList div#con3 {
 				background-color: #ddf;
 			}
-			#tab1:checked~.contents .contentList{
+			
+			#tab1:checked~#label1 {
+				background-color: #fdd;
+			}
+			
+			#tab2:checked~#label2 {
+				background-color: #dfd;
+			}
+			
+			#tab3:checked~#label3 {
+				background-color: #ddf;
+			}
+			
+			#tab1:checked~#contents #conList {
 				left: 0;
 			}
-			#tab2:checked~.contents .contentList{
+			
+			#tab2:checked~#contents #conList {
 				left: -600px;
 			}
-			#tab3:checked~.contents .contentList{
+			
+			#tab3:checked~#contents #conList {
 				left: -1200px;
-			}
-			#tab1:checked~#label1{
-				background-color: #000;
-				color: #fff;
-			}
-			#tab2:checked~#label2{
-				background-color: #000;
-				color: #fff;
-			}
-			#tab3:checked~#label3{
-				background-color: #000;
-				color: #fff;
 			}
 		</style>
 	</head>
+
 	<body>
-		<div class="tabs">
-			<input type="radio" checked="checked" name="tab" id="tab1"/>
-			<input type="radio" name="tab" id="tab2"/>
-			<input type="radio" name="tab" id="tab3"/>
-			<label for="tab1" id="label1">新闻</label>
-			<label for="tab2" id="label2">通知</label>
-			<label for="tab3" id="label3">公告</label>
-			<div class="contents">
-				<div class="contentList clearfix">
-					<div id="con1">
-						新闻内容
-					</div>
-					<div id="con2">
-						通知内容
-					</div>
-					<div id="con3">
-						公告内容
-					</div>
+		<div id="tabs"><input type="radio" checked="checked" name="tab" id="tab1" /><input type="radio" name="tab" id="tab2" /><input type="radio" name="tab" id="tab3" /><label for="tab1" id="label1">通知</label><label for="tab2" id="label2">新闻</label><label for="tab3" id="label3">公告</label>
+			<div id="contents">
+				<div id="conList" class="clearfix">
+					<div id="con1">通知内容</div>
+					<div id="con2">新闻内容</div>
+					<div id="con3">公告内容</div>
 				</div>
 			</div>
 		</div>
 	</body>
+
 </html>
