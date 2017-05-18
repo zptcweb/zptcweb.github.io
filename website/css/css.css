@@ -191,3 +191,15 @@ main section h2{
 /*
  版权部分
  * */
+#goTop{
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	border: 1px solid #fff;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 0.8em;
+	color: #fff;
+}

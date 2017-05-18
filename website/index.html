@@ -2,24 +2,26 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>王海庆个人主页</title>
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/css.css"/>
 	</head>
 	<body>
 		<div class="wrapper">
 			<header>
-				<a href="index.html" class="logo">
-					<h1>个人主页</h1>
-					<img src="img/steemit.svg" alt="" />
-				</a>
-				<div class="mainNav">
-					<ul class="clearfix">
-						<li><a href="#a">关于</a></li>
-						<li><a href="#b">工作</a></li>
-						<li><a href="#c">联系</a></li>
-					</ul>
-				</div>
+				<section>
+					<a href="index.html" class="logo">
+						<h1>个人主页</h1>
+						<img src="img/steemit.svg" alt="" />
+					</a>
+					<div class="mainNav">
+						<ul class="clearfix">
+							<li><a href="#a">关于</a></li>
+							<li><a href="#b">工作</a></li>
+							<li><a href="#c">联系</a></li>
+						</ul>
+					</div>
+				</section>
 				<a id="a"></a>
 				<h2>大家好，我是王海庆。</h2>
 				<p>我是一个前端迷，喜欢探索，喜欢研究，对一切未知而又充满质感的事物充满好奇心，永远保持一颗童心。</p>
@@ -97,9 +99,23 @@
 			</main>
 			<footer>
 				<p>
-					&copy; 王海庆版权所有，如有雷同，纯属巧合！
+					&copy; 王海庆版权所有，如有雷同，非常感谢！
 				</p>
+				<a id="goTop" href="#">顶部</a>
 			</footer>
 		</div>
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('header a').on('click', function(e) {
+					e.preventDefault();
+					$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500);
+				});
+				$('#goTop').on('click', function(e) {
+					e.preventDefault();
+					$('html, body').animate({ scrollTop: 0}, 500);
+				});
+			});
+		</script>
 	</body>
 </html>
