@@ -24,6 +24,7 @@ a{
 body{
 	background: url(../img/bg.jpg) center top fixed;
 	min-height: 1200px;
+	color: #fff;
 }
 .wrapper{
 	max-width: 1200px;
@@ -36,7 +37,6 @@ body{
 header{
 	position: relative;
 	margin: 30px 0px;
-	color: #fff;
 }
 .logo h1{
 	display: none;
@@ -59,7 +59,7 @@ header{
 	color: #fff;
 	padding: 20px;
 	border: 1px solid transparent;
-	transition: all .5s;
+	transition: color .5s,border .5s;
 }
 .mainNav ul li a:hover{
 	color: #000;
@@ -69,10 +69,17 @@ header h2{
 	margin: 50px 0;
 	font-size: 30px;
 }
-/*中间部分设置*/
-main{
-	color: #fff;
+p a{
+	border-bottom:1px dashed #fff;
+	padding-bottom: 4px;
+	transition: border .5s;
 }
+p a:hover{
+	border-bottom:1px solid #fff;
+}
+/*
+ * 中间部分设置
+ * */
 main section{
 	margin: 50px 0px;
 }
@@ -135,3 +142,52 @@ main section h2{
 .work figure:hover img{
 	-webkit-filter: grayscale(0);
 }
+/*
+ contact 部分
+ * */
+.contactContainer dl dt{
+	padding:5px 20px;
+	background-color: #fff;
+	color: #000;
+	display: inline-block;
+}
+.contactContainer dl dd{
+	padding:5px 20px;
+	background-color: #000;
+	color: #fff;
+	margin: 0px 30px 0px 0px;
+	display: inline-block;
+}
+.contact input{
+	width: 31%;
+	margin: 5px 2% 5px 0px;
+	padding: 10px 16px;
+	border-radius: 3px;
+	border: none;
+	outline: none;
+}
+.contact select{
+	width: 32%;
+	padding: 10px 16px;
+	border-radius: 3px;
+	margin: 5px 0px 5px 4px;
+}
+.contact textarea,
+.contact input[type="submit"]{
+	width: 48%;
+	height: 50px;
+	padding: 10px 16px;
+	border-radius: 3px;
+	margin: 5px 3% 5px 0px;
+	vertical-align: top;
+}
+.contact input[type="submit"]{
+	margin: 5px 0px;
+	border:none;
+	outline: none;
+	background-color: #00BFFF;
+	cursor: pointer;
+}
+/*
+ 版权部分
+ * */

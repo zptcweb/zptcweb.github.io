@@ -15,11 +15,12 @@
 				</a>
 				<div class="mainNav">
 					<ul class="clearfix">
-						<li><a href="#">关于</a></li>
-						<li><a href="#">工作</a></li>
-						<li><a href="#">联系</a></li>
+						<li><a href="#a">关于</a></li>
+						<li><a href="#b">工作</a></li>
+						<li><a href="#c">联系</a></li>
 					</ul>
 				</div>
+				<a id="a"></a>
 				<h2>大家好，我是王海庆。</h2>
 				<p>我是一个前端迷，喜欢探索，喜欢研究，对一切未知而又充满质感的事物充满好奇心，永远保持一颗童心。</p>
 				<p>浙江邮电职业技术学院青年教师一枚，执着于前端技术。html5、css3、javascript、jquery、vue.js、angularjs、babel、sass、markdown、git等等都是我的最爱！！</p>
@@ -41,6 +42,7 @@
 					</ul>
 				</section>
 				<section class="workContainer">
+					<a id="b"></a>
 					<h2>项目示例</h2>
 					<div class="work clearfix">
 						<figure class="work">
@@ -70,16 +72,34 @@
 					</div>
 				</section>
 				<section class="contactContainer">
+					<a id="c"></a>
 					<h2>联系我们</h2>
 					<p>前端技术发展非常迅速，个人视野有限，希望大家可以通过广泛的交流互动，实现共同提高！！期待您的回复！！</p>
-					<p>邮箱：whqet@qq.com  QQ:86079959</p>
+					<dl>
+						<dt>邮箱</dt>
+						<dd>whqet@qq.com</dd>
+						<dt>QQ</dt>
+						<dd>86079959</dd>
+					</dl>
 					<div class="contact">
+						<input type="text" name="name" id="name" placeholder="名字" />
 						<input type="text" name="name" id="name" placeholder="邮箱" />
+						<select name="fav" id="fav">
+							<option value="fav">兴趣</option>
+							<option value="web">网页开发</option>
+							<option value="app">应用开发</option>
+							<option value="html5">html5开发</option>
+							<option value="chat">微信开发</option>
+						</select>
+						<textarea name="message" id="message" placeholder="留言"></textarea>
+						<input type="submit" name="submit" id="submit" value="提交信息"/>
 					</div>
 				</section>
 			</main>
 			<footer>
-				
+				<p>
+					&copy; 王海庆版权所有，如有雷同，纯属巧合！
+				</p>
 			</footer>
 		</div>
 	</body>
