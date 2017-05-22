@@ -93,8 +93,6 @@ header{
 	margin: 20px 30px;
 }
 .mainNav ul li a{
-	text-decoration: none;
-	color: #fff;
 	padding: 20px;
 	border: 1px solid transparent;
 	transition: color .5s,border .5s;

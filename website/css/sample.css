@@ -1,0 +1,116 @@
+/*
+ 公共设置
+ * */
+*{
+	box-sizing: border-box;
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	padding: 0;
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+
+/*
+整体设置
+ * */
+body{
+	background: url(../img/bg.jpg) center top fixed;
+	min-height: 1200px;
+	color: #fff;
+}
+.wrapper{
+	max-width: 1200px;
+	padding: 20px;
+	margin: auto;
+}
+/*
+ 头部设置
+ * */
+header{
+	position: relative;
+	margin: 30px 0px;
+}
+.logo h1{
+	display: none;
+}
+.logo img{
+	width: 80px;
+	height: auto;
+}
+.mainNav{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.mainNav ul li{
+	float: left;
+	margin: 20px 30px;
+}
+.mainNav ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 20px;
+	border: 1px solid transparent;
+	transition: color .5s,border .5s;
+}
+.mainNav ul li a:hover{
+	color: #000;
+	border: 1px solid #fff;
+}
+header h2{
+	margin: 50px 0;
+	font-size: 30px;
+}
+p a{
+	border-bottom:1px dashed #fff;
+	padding-bottom: 4px;
+	transition: border .5s;
+}
+p a:hover{
+	border-bottom:1px solid #fff;
+}
+/*
+ * 中间部分设置
+ * */
+/*
+ 兴趣部分
+ * */
+.favContainer{
+	
+}
+.fav li{
+	float: left;
+	width: 160px;
+	height: 48px;
+	text-align: center;
+	line-height: 48px;
+	background-color: rgba(100,100,200,.5);
+	margin: 10px 30px 10px 0px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color .5s, border-radius 1s ease .5s,border .5s;
+	border: 2px solid transparent;
+	/*
+	transition  过渡属性
+	 	transition-property   参与过渡的属性
+	 	transition-duration   过渡持续时间
+	 	transition-timing-function  过渡类型函数
+	 	transition-delay      过渡延迟时间
+	 * */
+}
+.fav li:hover{
+	background-color: rgba(100,100,200,.2);
+	border-radius: 0px;
+	border: 2px solid #fff;
+}
+/*
+ 项目部分
+ * */
