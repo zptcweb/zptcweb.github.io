@@ -102,14 +102,29 @@
 					&copy; 王海庆版权所有，如有雷同，非常感谢！
 				</p>
 				<a id="goTop" href="#">顶部</a>
+				<nav class="rightNav">
+			        <ul class="dotnav dotnav-vertical dotnav-right nav">
+			            <li class="awesome-tooltip" title="关于"><a href="#a"></a></li>
+			            <li class="awesome-tooltip" title="工作"><a href="#b"></a></li>
+			            <li class="awesome-tooltip" title="联系"><a href="#c"></a></li> 
+			        </ul>
+			    </nav>
 			</footer>
 		</div>
 		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			$(function() {
-				$('header a').on('click', function(e) {
+				//http://codepen.io/whqet/pen/OmaqqG?editors=0100
+				
+				$('body').scrollspy({ 
+				  target: '.rightNav', 
+				  offset: 000
+				});  
+				$('header a, .rightNav a').on('click', function(e) {
 					e.preventDefault();
 					$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500);
+					
 				});
 				$('#goTop').on('click', function(e) {
 					e.preventDefault();
