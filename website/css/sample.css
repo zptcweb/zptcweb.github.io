@@ -114,3 +114,43 @@ p a:hover{
 /*
  项目部分
  * */
+.workContainer{
+	
+}
+.work figure{
+	float: left;
+	width: 30%;
+	margin: 20px 5% 20px 0px;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+}
+.work figure:nth-child(3n){
+	margin-right: 0px;
+}
+.work figure img{
+	width: 100%;
+	height: auto;
+	/*-webkit-filter: grayscale(1);
+	filter: grayscale(1);*/
+	filter: hue-rotate(0deg);
+	transition: all .5s;
+}
+.work figure:hover img{
+/*	-webkit-filter: grayscale(0);
+	filter: grayscale(0);*/
+	filter: hue-rotate(240deg);
+}
+.work figure figcaption{
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	position: absolute;
+	top: calc(50% - 10px);
+	opacity: 0;
+	transition: opacity .5s; 
+	z-index: 1;
+}
+.work figure:hover figcaption{
+	opacity: 1;
+}
