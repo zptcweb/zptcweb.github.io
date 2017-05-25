@@ -45,6 +45,44 @@ header{
 	width: 80px;
 	height: auto;
 }
+.logo:hover img{
+	animation: run 1s;
+}
+@keyframes run{
+	0%{
+		transform: rotate(0deg);
+	}
+	10%{
+		transform: rotate(-30deg);
+	}
+	20%{
+		transform: rotate(30deg);
+	}
+	30%{
+		transform: rotate(-20deg);
+	}
+	40%{
+		transform: rotate(20deg);
+	}
+	50%{
+		transform: rotate(-15deg);
+	}
+	60%{
+		transform: rotate(15deg);
+	}
+	70%{
+		transform: rotate(-10deg);
+	}
+	80%{
+		transform: rotate(5deg);
+	}
+	90%{
+		transform: rotate(-5deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
 .mainNav{
 	position: absolute;
 	top: 0;
@@ -55,8 +93,6 @@ header{
 	margin: 20px 30px;
 }
 .mainNav ul li a{
-	text-decoration: none;
-	color: #fff;
 	padding: 20px;
 	border: 1px solid transparent;
 	transition: color .5s,border .5s;
@@ -202,4 +238,76 @@ main section h2{
 	line-height: 40px;
 	font-size: 0.8em;
 	color: #fff;
+}
+/*
+ 右侧导航
+ * */
+.dotnav-right {
+    right: 10px;
+    top: 50%;
+    margin-top: -50px;
+    height: 100px;
+    z-index: 999;
+    position: fixed;
+}
+
+.dotnav {
+    padding: 0;
+    list-style: none;
+    font-size: 0.001px;
+}
+
+.dotnav > li {
+    display: inline-block;
+    font-size: 1rem;
+    vertical-align: top;
+}
+.dotnav > li:nth-child(n+2) {
+    margin-left: 15px;
+}
+
+.dotnav > li > a {
+    display: inline-block;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #66ccff;
+    vertical-align: top;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -999%;
+}
+.dotnav > li > a:hover,
+.dotnav > li > a:focus {
+    background: #66ccff;
+    outline: none;
+}
+.dotnav > li > a:active {
+    background: #66ccff;
+}
+.dotnav > li.active > a {
+    background: #66ccff;
+}
+.dotnav-vertical > li {
+    display: block;
+    margin-right:10px;
+}
+.dotnav-vertical > li:nth-child(n+2) {
+    margin-left: 0;
+    margin-top: 10px;
+}
+.awesome-tooltip + .tooltip > .tooltip-inner {
+    background-color: #66ccff; 
+    color: #fff; 
+    border: 1px solid #66ccff; 
+}
+.awesome-tooltip + .tooltip.left > .tooltip-arrow{
+    top:50%;
+    right:0;
+    margin-top:-5px;
+    border-top:5px solid transparent;
+    border-bottom:5px solid transparent;
+    border-left:5px solid #66ccff;
 }

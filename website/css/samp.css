@@ -1,0 +1,144 @@
+/*
+ 公共设置
+ * */
+*{
+	box-sizing: border-box;
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	padding: 0;
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+
+/*
+整体设置
+ * */
+body{
+	background: url(../img/bg.jpg) center top fixed;
+	min-height: 1200px;
+	color: #fff;
+}
+.wrapper{
+	max-width: 1200px;
+	padding: 20px;
+	margin: auto;
+}
+/*
+ 头部设置
+ * */
+header{
+	position: relative;
+	margin: 30px 0px;
+}
+.logo h1{
+	display: none;
+}
+.logo img{
+	width: 80px;
+	height: auto;
+}
+.mainNav{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.mainNav ul li{
+	float: left;
+	margin: 20px 30px;
+}
+.mainNav ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 20px;
+	border: 1px solid transparent;
+	transition: color .5s,border .5s;
+}
+.mainNav ul li a:hover{
+	color: #000;
+	border: 1px solid #fff;
+}
+header h2{
+	margin: 50px 0;
+	font-size: 30px;
+}
+p a{
+	border-bottom:1px dashed #fff;
+	padding-bottom: 4px;
+	transition: border .5s;
+}
+p a:hover{
+	border-bottom:1px solid #fff;
+}
+/*
+ * 中间部分设置
+ * */
+/*
+ 我的兴趣部分
+ * */
+.favContainer{
+	
+}
+.fav li{
+	float: left;
+	width: 160px;
+	height: 48px;
+	text-align: center;
+	line-height: 48px;
+	background-color:rgba(100,100,200,.5);
+	margin: 10px 30px 10px 0px;
+	border-radius: 10px;
+	transition: border-radius .5s, background-color .5s;
+	cursor: pointer;
+}
+.fav li:hover{
+	background-color:rgba(100,100,200,.3);
+	border-radius: 0px;
+}
+/*
+ 项目示例部分
+ * */
+.workContainer{
+	
+}
+.work figure{
+	float: left;
+	width: 30%;
+	margin: 20px 5% 20px 0px;
+	overflow: hidden;
+	position: relative;
+}
+.work figure:nth-child(3n){
+	margin-right: 0px;
+}
+.work figure img{
+	width: 100%;
+	height: auto;
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+	transition: -webkit-filter .5s,filter .5s;
+}
+.work figure:hover img{
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+.work figure figcaption{
+	width: 100%;
+	height: 20px;
+	position: absolute;
+	text-align: center;
+	top: calc(50% - 10px);
+	opacity: 0;
+	transition: opacity .5s;
+	z-index: 3;
+}
+.work figure:hover figcaption{
+	opacity: 1;
+}
