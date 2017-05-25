@@ -1,0 +1,166 @@
+/*
+ 基础设置
+ * */
+*{
+	box-sizing: border-box;
+}
+body{
+	color: #000;
+}
+ul{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.container{
+	width: 1200px;
+	margin: auto;
+}
+/*
+ header部分
+ * */
+header{
+	width: 100%;
+	padding: 20px 0px;
+	background-color: rgba(0,0,0,0);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	transition: all .5s;
+}
+header.on{
+	padding: 3px 0;
+	background-color: rgba(0,0,0,.8);
+}
+header .logo{
+	float: left;
+}
+header .logo img{
+	display: inline-block;
+	vertical-align: middle;
+}
+header .logo span.siteName{
+	font-size:3em;
+	vertical-align: middle;
+	color: #fff;
+	/*font-family: 'Lobster', cursive;*/
+	font-family: 'Dancing Script', cursive;
+	/*
+	 http://www.googlefonts.cn/
+	 * */
+}
+header .topMenu{
+	float: right;
+}
+header .topMenu li{
+	float: left;
+	margin: 20px;
+}
+header .topMenu li a{
+	color: #ffffff;
+	text-shadow: 1px 1px 3px rgba(0,0,0,.2);
+	transition: color .5s;
+}
+header .topMenu li.active a,
+header .topMenu li a:hover{
+	color: #339BEB;
+}
+/*
+ 焦点部分
+ * */
+.banner{
+    color: #fff;
+	background: url(../img/banner.jpg) no-repeat center top;
+	background-size: cover;
+}
+.banner .caption{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+}
+.banner .caption h1 span{
+	color: #339BEB;
+}
+.banner .caption p{
+	text-align: left;
+	line-height: 1.8;
+}
+.banner .caption p em{
+	background-color:rgba(255,255,255,.5);
+	color: #000;
+	padding: 2px 4px;
+	font-style: normal;
+	text-shadow: none;
+}
+/*
+ 关于部分
+ * */
+section{
+	padding: 50px 0px;
+	line-height: 2;
+	min-height: 400px;
+}
+section h2{
+	text-align: center;
+	font-family: "微软雅黑";
+	margin: 0px;
+}
+section h2+p{
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 60px;
+}
+.about{
+	
+}
+.about .img{
+	width: 49%;
+	float: left;
+}
+.about .img img{
+	width: 100%;
+	height: auto;
+}
+.about .note{
+	width: 49%;
+	float: right;
+	text-align: left;
+}
+.about .note ul{
+	counter-reset:testname 0;
+}
+.about .note li{
+	counter-increment:testname 1;
+	position: relative;
+	padding-left: 2em;
+	cursor: pointer;
+}
+.about .note li::before{
+	content:counter(testname);
+	width: 1.2em;
+	height: 1.2em;
+	border: 1px dashed #000;
+	text-align: center;
+	line-height: 1.2;
+	border-radius: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0.3em;
+	transition:transform .5s;
+	transform: translate(0px);
+}
+.about .note li:hover::before{
+	transform: translate(0.5em);
+}
