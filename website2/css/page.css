@@ -141,6 +141,9 @@ section h2+p{
 	float: right;
 	text-align: left;
 }
+.about .note p:first-child{
+	margin-top: 0px;
+}
 .about .note ul{
 	counter-reset:testname 0;
 }
@@ -311,4 +314,10 @@ section h2+p{
 }
 ::-moz-placeholder{
 	color: #000;
+}
+/*
+ footer
+ * */
+footer{
+	text-align: center;
 }
