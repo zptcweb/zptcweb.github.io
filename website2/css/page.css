@@ -15,13 +15,16 @@ ul{
 a{
 	text-decoration: none;
 }
+figure{
+	margin: 0;
+}
 .clearfix::after{
 	content: "";
 	display: table;
 	clear: both;
 }
 .container{
-	width: 1200px;
+	max-width: 1200px;
 	margin: auto;
 }
 /*
@@ -163,4 +166,149 @@ section h2+p{
 }
 .about .note li:hover::before{
 	transform: translate(0.5em);
+}
+/*
+ 服务模块
+ * */
+.service{
+	min-height: 600px;
+	background: url(../img/banner2.jpg) center center no-repeat;
+	background-size: cover;
+	color: #fff;
+	text-shadow: 1px 1px 0px rgba(0,0,0,.5);
+}
+.service li{
+	float: left;
+	width: 48%;
+	margin-right: 4%;
+	text-align: right;
+}
+.service li::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.service li:nth-child(2n){
+	margin-right: 0px;
+	text-align: left;
+}
+.service li i{
+	float: right;
+	padding: 12px 0px 12px 20px;
+}
+.service li:nth-child(2n) i{
+	float: left;
+	padding: 12px 20px 12px 0px;
+}
+.service li h3{
+	display: inline-block;
+	margin: 0px;
+}
+/*
+ * 项目模块
+ * */
+.project{
+	
+}
+.project figure{
+	float: left;
+	overflow: hidden;
+	width: 24%;
+	margin: 10px calc(4% / 3) 10px 0px;
+	position: relative;
+	cursor: pointer;
+}
+.project figure:nth-child(4n){
+	margin-right: 0px;
+}
+.project figure img{
+	width: 100%;
+	height: auto;
+	transform: scale(1) rotate(0deg);
+	transition: transform .5s;
+	vertical-align: top;
+}
+.project figure:hover img{
+	transform: scale(1.2) rotate(3deg);
+}
+.project figure figcaption{
+	position: absolute;
+	left: 5%;
+	right: 5%;
+	top: 50%;
+	bottom: 5%;
+	background-color: rgba(255,255,255,.8);
+	padding: 10px;
+}
+.project figure figcaption .time{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color:#339BEB;
+	font-size: 0.8em;
+	text-align: center;
+}
+.project figure figcaption .time .month{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.project figure figcaption h3{
+	margin: 5px 0px 0px 70px;
+}
+.project figure figcaption p{
+	font-size: 0.8em;
+	line-height: 1.5;
+}
+.project figure figcaption .data{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	font-size: 0.8em;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	background-color: rgba(0,0,0,.2);
+	text-align: right;
+}
+.project figure figcaption .data *{
+	padding: 0px 2px;
+}
+/*
+ * 联系我们
+ */
+.contact{
+	background: url(../img/android-1869510_1920.jpg) no-repeat center top;
+	background-size: cover;
+	color: #fff;
+}
+.contact .left{
+	width: 48%;
+	float: left;
+	margin-right: 4%;
+}
+.contact .left p{
+	margin-top: 0px;
+}
+.contact li i{
+	padding: 0px 10px 0px 0px;
+}
+.contact .right{
+	float: right;
+	width: 48%;
+	margin-right: 0%;
+}
+.contact .right input,
+.contact .right textarea{
+	width: 100%;
+	padding: 10px 16px;
+	margin: 10px 0;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	background: rgba(255,255,255,0.6);
+}
+::-webkit-input-placeholder{
+	color: #000;
+}
+::-moz-placeholder{
+	color: #000;
 }

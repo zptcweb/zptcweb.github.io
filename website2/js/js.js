@@ -17,10 +17,16 @@ $(function() {
 			}
 		};
 	});
+	
+	//滚动监听
+	$('body').scrollspy({
+		target:'.scrollspy',
+		offset:70
+	});
 		
 	//设置单击菜单动画跳转
 	$('header a').on('click', function(e) {
 		e.preventDefault();
-		$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500);
+		$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top-60}, 500);
 	});
 });
