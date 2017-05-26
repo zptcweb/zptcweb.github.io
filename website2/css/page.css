@@ -152,6 +152,7 @@ section h2+p{
 	position: relative;
 	padding-left: 2em;
 	cursor: pointer;
+	list-style: none;
 }
 .about .note li::before{
 	content:counter(testname);
