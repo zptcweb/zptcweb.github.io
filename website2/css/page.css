@@ -99,6 +99,7 @@ header .topMenu li a:hover{
 .banner .caption p{
 	text-align: left;
 	line-height: 1.8;
+	font-family: "微软雅黑";
 }
 .banner .caption p em{
 	background-color:rgba(255,255,255,.5);
