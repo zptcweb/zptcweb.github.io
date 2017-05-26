@@ -1,45 +1,68 @@
 ﻿<!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>王海庆个人主页</title>
 		<link rel="stylesheet" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
 	</head>
+
 	<body>
 		<div class="wrapper">
 			<header>
-				<section>
-					<a href="index.html" class="logo" title="欢迎光临我的个人网站！！">
-						<h1>个人主页</h1>
-						<img src="img/steemit.svg" alt="" />
-					</a>
-					<div class="mainNav">
-						<ul class="clearfix">
-							<li><a href="#a">关于</a></li>
-							<li><a href="#b">工作</a></li>
-							<li><a href="#c">联系</a></li>
-						</ul>
-					</div>
-				</section>
+				<a href="index.html" class="logo" title="欢迎光临我的个人网站！！">
+					<h1>个人主页</h1>
+					<img src="img/steemit.svg" alt="" />
+				</a>
+				<div class="mainNav">
+					<ul class="clearfix">
+						<li>
+							<a href="#a">关于</a>
+						</li>
+						<li>
+							<a href="#b">工作</a>
+						</li>
+						<li>
+							<a href="#c">联系</a>
+						</li>
+					</ul>
+				</div>
 				<a id="a"></a>
 				<h2>大家好，我是王海庆。</h2>
 				<p>我是一个前端迷，喜欢探索，喜欢研究，对一切未知而又充满质感的事物充满好奇心，永远保持一颗童心。</p>
 				<p>浙江邮电职业技术学院青年教师一枚，执着于前端技术。html5、css3、javascript、jquery、vue.js、angularjs、babel、sass、markdown、git等等都是我的最爱！！</p>
-				<p>来吧，让我们一起来畅游前端的世界。<a href="http://codepen.io/ericthayer/pen/zNxMer">模仿实现</a>，但适度创意！！</p>
+				<p>来吧，让我们一起来畅游前端的世界。
+					<a href="http://codepen.io/ericthayer/pen/zNxMer">模仿实现</a>，但适度创意！！</p>
 			</header>
 			<main>
 				<section class="favContainer">
 					<h2>我的兴趣</h2>
 					<ul class="fav clearfix">
-						<li><a href="#" title="响应式布局">RWD</a></li>
-						<li><a href="#" title="流体布局">Flexbox</a></li>
-						<li><a href="#" title="CSS的预处理器">Sass</a></li>
-						<li><a href="#" title="CSS的预处理">Less</a></li>
-						<li><a href="#" title="CSS前缀处理">Autoprefix</a></li>
-						<li><a href="#" title="CSS新式布局方式">Grid</a></li>
-						<li><a href="#" title="不错的鼠标悬停效果集">iHover</a></li>
-						<li><a href="#" title="不错的动画库">Animate.css</a></li>
+						<li>
+							<a href="#" title="响应式布局">RWD</a>
+						</li>
+						<li>
+							<a href="#" title="流体布局">Flexbox</a>
+						</li>
+						<li>
+							<a href="#" title="CSS的预处理器">Sass</a>
+						</li>
+						<li>
+							<a href="#" title="CSS的预处理">Less</a>
+						</li>
+						<li>
+							<a href="#" title="CSS前缀处理">Autoprefix</a>
+						</li>
+						<li>
+							<a href="#" title="CSS新式布局方式">Grid</a>
+						</li>
+						<li>
+							<a href="#" title="不错的鼠标悬停效果集">iHover</a>
+						</li>
+						<li>
+							<a href="#" title="不错的动画库">Animate.css</a>
+						</li>
 					</ul>
 				</section>
 				<section class="workContainer">
@@ -93,7 +116,7 @@
 							<option value="chat">微信开发</option>
 						</select>
 						<textarea name="message" id="message" placeholder="留言"></textarea>
-						<input type="submit" name="submit" id="submit" value="提交信息"/>
+						<input type="submit" name="submit" id="submit" value="提交信息" />
 					</div>
 				</section>
 			</main>
@@ -109,14 +132,19 @@
 			$(function() {
 				$('header a, .rightNav a').on('click', function(e) {
 					e.preventDefault();
-					$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500);
-					
+					$('html, body').animate({
+						scrollTop: $($(this).attr('href')).offset().top
+					}, 500);
+
 				});
 				$('#goTop').on('click', function(e) {
 					e.preventDefault();
-					$('html, body').animate({ scrollTop: 0}, 500);
+					$('html, body').animate({
+						scrollTop: 0
+					}, 500);
 				});
 			});
 		</script>
 	</body>
+
 </html>
