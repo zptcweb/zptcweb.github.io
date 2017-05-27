@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				box-sizing: border-box;
+			}
+			.father{
+				width: 400px;
+				height: 400px;
+				background-color: #030;
+				text-align: center;
+				/*padding: 0 50px;*/
+				position: relative;
+			}
+			.son{
+				width: 220px;
+				height: 160px;
+				line-height: 400px;
+				/*margin: auto;*/
+				background-color: #003;
+				
+				/*position: absolute;*/
+				
+				/*1*/
+				/*left: 50%;
+				top: 50%;
+				margin-left: -120px;
+				margin-top: -90px;*/
+				
+				/*2*/
+				/*left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;*/
+				
+				/*3*/
+				/*left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);*/
+				
+				/*4,没有写死的宽和高*/
+				/*left: 20px;
+				right: 20px;
+				top: 20%;
+				bottom: 20%;*/
+				
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="father">
+			<div class="son"></div>
+		</div>
+		<!--
+			块元素水平居中
+				子元素 固定宽度 水平方向margin为auto
+				子元素 转为dib，父元素上tac
+				父元素设置padding，子元素不设置宽
+			
+			块元素水平垂直居中
+				posa  left top 50%	margin进行偏移
+				posa  l r t b  0   margin为auto
+		-->
+	</body>
+</html>

@@ -1,0 +1,67 @@
+/*
+ * 全局 
+ * 
+ * */
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	list-style: none;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+}
+input{
+	border: none;
+	outline: none;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+/*
+ * header部分
+ * */
+header{
+	position: fixed;
+	width: 100%;
+	padding: 20px 0px;
+	background-color: rgba(0,0,0,0.1);
+}
+header a{
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+header a:hover{
+	color: #339BEB;
+}
+header .logo{
+	float: left;
+}
+header .logo img,
+header .logo span{
+	vertical-align: middle;
+}
+header .logo span{
+	font-size:3.5em;
+	font-family: 'Dancing Script', cursive;
+}
+header .topMenu{
+	float: right;
+	margin-top: 5px;
+}
+header .topMenu ul li{
+	float: left;
+	margin: 0px 30px;
+}
+/*
+ * banner
+ * */
+.banner{
+	min-height: 600px;
+	background: url(../img/banner.jpg) no-repeat center top;
+	
+}
