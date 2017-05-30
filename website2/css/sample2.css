@@ -1,0 +1,73 @@
+/*
+ 全局设置
+ * */
+*{
+	box-sizing: border-box;
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	list-style-type: none;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+body{
+	min-height: 1400px;
+}
+/*
+ header部分
+ * */
+header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 20px 0px;
+	background-color:rgba(0,0,0,.01);
+	transition: background-color .5s,padding .5s;
+}
+header.on{
+	padding: 5px 0px;
+	background-color:rgba(0,0,0,.8);
+}
+header .logo{
+	float: left;
+}
+header .logo span,
+header .logo img{
+	vertical-align: middle;
+}
+header .logo span{
+	font-size: 3.6em;
+	font-family: 'Dancing Script', cursive;
+}
+header .topMenu{
+	float: right;
+}
+header .topMenu ul li{
+	float: left;
+	margin: 10px 30px;
+}
+header .topMenu a{
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+header .topMenu a:hover{
+	color: #339BEB;
+}
+/*
+ 首页banner的设置
+ * */
+.banner{
+	min-height: 800px;
+	background: url(../img/banner.jpg) no-repeat center top;
+}
