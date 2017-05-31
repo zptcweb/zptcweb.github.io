@@ -21,6 +21,7 @@ input{
 .container{
 	max-width: 1200px;
 	margin: auto;
+	padding: 1px;
 }
 body{
 	min-height: 1400px;
@@ -107,5 +108,29 @@ header .topMenu ul li{
 .banner{
 	min-height: 600px;
 	background: url(../img/banner.jpg) no-repeat center top;
+	color: #fff;
+	line-height: 1.5;
+}
+.banner .container{
+	width: 800px;
+	height: 180px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+.banner .container h1{
+	text-align: center;
+}
+.banner .container h1 strong{
+	color: #339BEB;
+}.banner .container p strong{
+	background-color:rgba(255,255,255,.5);
+	color:#000;
+	padding: 3px;
+	font-weight: normal;
 	
 }
