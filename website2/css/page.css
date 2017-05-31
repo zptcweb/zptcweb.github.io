@@ -26,6 +26,36 @@ figure{
 .container{
 	max-width: 1200px;
 	margin: auto;
+	position: relative;
+	z-index: 1;
+}
+/*
+ 字体,不使用google字体，下载到本地来使用
+ **/
+/* vietnamese */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dancing Script Regular'), local('DancingScript-Regular'), url(../font/google/DK0eTGXiZjN6yA8zAEyM2fRMc6C39aem-aUPzsV2c2w.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dancing Script Regular'), local('DancingScript-Regular'), url(../font/google/DK0eTGXiZjN6yA8zAEyM2e87R-l0-Xx_7cYc0ZX1ifE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dancing Script Regular'), local('DancingScript-Regular'), url(../font/google//DK0eTGXiZjN6yA8zAEyM2Ud0sm1ffa_JvZxsF_BEwQk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+>>>>>>> e2f43f8445608d9dd17258b5abcf22dcd280efee
 }
 /*
  header部分
@@ -42,7 +72,7 @@ header{
 }
 header.on{
 	padding: 3px 0;
-	background-color: rgba(0,0,0,.8);
+	background-color: rgba(0,0,0,.7);
 }
 header .logo{
 	float: left;
@@ -55,7 +85,6 @@ header .logo span.siteName{
 	font-size:3em;
 	vertical-align: middle;
 	color: #fff;
-	/*font-family: 'Lobster', cursive;*/
 	font-family: 'Dancing Script', cursive;
 	/*
 	 http://www.googlefonts.cn/
@@ -99,6 +128,7 @@ header .topMenu li a:hover{
 .banner .caption p{
 	text-align: left;
 	line-height: 1.8;
+	font-family: "微软雅黑";
 }
 .banner .caption p em{
 	background-color:rgba(255,255,255,.5);
@@ -114,6 +144,17 @@ section{
 	padding: 50px 0px;
 	line-height: 2;
 	min-height: 400px;
+	position: relative;
+}
+section:nth-of-type(2n+3)::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	box-shadow: inset 0px 0px 100px 50px rgba(0,0,0,.5);
 }
 section h2{
 	text-align: center;
@@ -141,6 +182,9 @@ section h2+p{
 	float: right;
 	text-align: left;
 }
+.about .note p:first-child{
+	margin-top: 0px;
+}
 .about .note ul{
 	counter-reset:testname 0;
 }
@@ -149,6 +193,7 @@ section h2+p{
 	position: relative;
 	padding-left: 2em;
 	cursor: pointer;
+	list-style: none;
 }
 .about .note li::before{
 	content:counter(testname);
@@ -311,4 +356,10 @@ section h2+p{
 }
 ::-moz-placeholder{
 	color: #000;
+}
+/*
+ footer
+ * */
+footer{
+	text-align: center;
 }

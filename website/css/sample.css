@@ -17,7 +17,10 @@ a{
 	text-decoration: none;
 	color: #fff;
 }
-
+input{
+	border: none;
+	outline: none;
+}
 /*
 整体设置
  * */
@@ -83,6 +86,9 @@ p a:hover{
 /*
  兴趣部分
  * */
+section h2{
+	margin: 50px 0 0 0;
+}
 .favContainer{
 	
 }
@@ -153,4 +159,72 @@ p a:hover{
 }
 .work figure:hover figcaption{
 	opacity: 1;
+}
+/*
+ 联系我们
+ * */
+.contactContainer dt{
+	/*宽、高、颜色、背景色、文字居中、显示方式*/
+	width: 100px;
+	height: 30px;
+	color: #000;
+	background-color: #fff;
+	text-align: center;
+	line-height: 30px;
+	display: inline-block;
+}
+.contactContainer dd{
+	/*宽、高、颜色、背景色、文字居中、显示方式*/
+	/*不定宽，跟据内容宽度而定*/
+	padding: 0px 30px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #000;
+	display: inline-block;
+	margin-left:0px;
+	margin-right: 50px;
+}
+.contact input{
+	width: 31%;
+	padding: 10px 16px;
+	border-radius: 5px;
+	margin: 20px 3% 20px 0;
+}
+.contact select{
+	width: 31%;
+	padding: 7px 16px;
+	border-radius: 5px;
+	color: #666;
+}
+.contact textarea{
+	width: 48%;
+	padding: 10px 16px;
+	height: 48px;
+	border-radius: 5px;
+	margin-right: 3%;
+}
+.contact input[type="submit"]{
+	width: 48%;
+	padding: 10px 16px;
+	height: 48px;
+	border-radius: 5px;
+	margin: 0;
+	position: relative;
+	top: -16px;
+	background-color: #00BFFF;
+}
+/*
+ 版权部分
+ * */
+#goTop{
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	border: 1px solid #fff;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 0.8em;
+	color: #fff;
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>企业官方网站</title>
+		<!--
+			1.重置 2.图标字体 3.google字体（特殊字体）4.自己的CSS
+			开发的时候，优先使用本地文件。发布的时候优先使用CDN的方式。
+		-->
+		<link rel="stylesheet" type="text/css" href="css/normalize.min.css"/>
+		<link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css"/>
+		<!--<link href='//fonts.googlefonts.net/css?family=Poiret+One|Lobster|Dancing+Script' rel='stylesheet' type='text/css'>-->
+		<link rel="stylesheet" type="text/css" href="css/sample2.css"/>
+		<link rel="icon" href="img/icon.ico" />
+	</head>
+	<body>
+		<!--头部-->
+		<header class="fixed">
+			<!--居中的容器-->
+			<div class="container clearfix">
+				<div class="logo">
+					<a href="#banner">
+						<img src="img/logo.png"/>
+						<span>Worthy</span>
+					</a>
+				</div>
+				<nav class="topMenu">
+					<ul class="clearfix">
+						<li><a href="#banner">首页</a></li>
+						<li><a href="#about">关于</a></li>
+						<li><a href="#service">服务</a></li>
+						<li><a href="#case">案例</a></li>
+						<li><a href="#contact">联系</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!--头部结束----------------->
+		<!--中间-->
+		<main>
+			<!--首页开始-->
+			<section id="banner" class="banner">
+				<div class="container">
+					<div class="text">
+						<h1>We are <strong>worthy</strong></h1>
+						<p>Worthy是专业的<mark>全媒体信息服务提供商</mark>，可以为您全媒体的企业展示、产品推广、活动策划等系列服务，包括纸媒、传统数媒、移动互联网等多渠道、多方式、全方位的形象设计、营销与推广。</p>
+						<p>欢迎致电垂询！</p>	
+					</div>
+						
+					<!--margin塌陷-->
+					<!--
+						当父元素没有padding和border的时候，子元素的竖直方向的 margin将会应用在父盒子上
+					-->
+				</div>
+			</section>
+			<!--首页结束------------->
+			<!--关于开始-->
+			<section id="about" class="about">
+				
+			</section>
+			<!--关于结束------------->
+			<!--服务开始-->
+			<section id="service" class="service">
+				
+			</section>
+			<!--服务结束------------->
+			<!--案例开始-->
+			<section id="case" class="case">
+				
+			</section>
+			<!--案例结束------------->
+			<!--联系开始-->
+			<section id="contact" class="contact">
+				
+			</section>
+			<!--联系结束------------->
+		</main>
+		<!--中间结束----------------->
+		<!--脚部-->
+		<footer></footer>
+		<!--脚部结束----------------->
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

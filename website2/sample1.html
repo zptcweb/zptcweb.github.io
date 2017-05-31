@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>企业官方网站</title>
+		<!--CSS重置-->
+		<link rel="stylesheet" href="css/normalize.min.css" />
+		<!--图标字体,开发的时候，建议本地导入-->
+		<!--<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+		<link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css"/>
+		<!--特殊字体,改用JS的方式-->
+		<!--<link href='//fonts.googlefonts.net/css?family=Dancing+Script|Shadows+Into+Light' rel='stylesheet' type='text/css'>-->
+		<!--自己的CSS-->
+		<link rel="stylesheet" type="text/css" href="css/sample1.css"/>
+		<!--图标-->
+		<link rel="icon shortcut" href="img/icon.ico"/>
+	</head>
+	<body>
+		<!--头部的菜单-->
+		<header class="fixed">
+			<div class="container clearfix">
+				<div class="logo">
+					<a href="#">
+						<img src="img/logo.png" alt="" />
+						<span>Worthy</span>
+					</a>
+				</div>
+				<nav class="topMenu">
+					<ul class="clearfix">
+						<li><a href="#banner">首页</a></li>
+						<li><a href="#about">关于</a></li>
+						<li><a href="#service">服务</a></li>
+						<li><a href="#case">案例</a></li>
+						<li><a href="#contact">联系</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<!--焦点图开始-->
+			<section class="banner" id="banner">
+				<div class="container">
+					<h1>We are <strong>Worthy</strong></h1>
+					<p>Worthy是专业的<strong>全媒体信息服务提供商</strong>，可以为您全媒体的企业展示、产品推广、活动策划等系列服务，包括纸媒、传统数媒、移动互联网等多渠道、多方式、全方位的形象设计、营销与推广。</p>
+					<p>欢迎致电垂询！！</p>
+					<!--
+						display:inline-block;
+						
+						margin塌陷，  当父盒子没有padding、border的时候，子盒子竖直方向的margin将会应用在父盒子上
+							
+					-->
+				</div>
+			</section>
+			<!--焦点图结束------------------->
+			<!--关于开始-->
+			<section class="about" id="about">
+				<div class="container"></div>
+			</section>
+			<!--关于结束------------------->
+			<!--服务开始-->
+			<section class="service" id="service">
+				<div class="container"></div>
+			</section>
+			<!--服务结束------------------->
+			<!--案例开始-->
+			<section class="case" id="case">
+				<div class="container"></div>
+			</section>
+			<!--案例结束------------------->
+			<!--联系开始-->
+			<section class="contact" id="contact">
+				<div class="container"></div>
+			</section>
+			<!--联系结束------------------->
+		</main>
+		<!--footer-->
+		<footer></footer>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			WebFontConfig = {
+				google: {
+					families: ['Dancing+Script::latin']
+				}
+			};
+			(function() {
+				var wf = document.createElement('script');
+				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+					'://ajax.googlefonts.net/ajax/libs/webfont/1/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'true';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+			})();
+		</script>
+	</body>
+</html>

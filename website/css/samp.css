@@ -83,6 +83,9 @@ p a:hover{
 /*
  我的兴趣部分
  * */
+section h2{
+	margin: 50px 0 0 0;
+}
 .favContainer{
 	
 }
@@ -141,4 +144,50 @@ p a:hover{
 }
 .work figure:hover figcaption{
 	opacity: 1;
+}
+/*
+ 联系我们
+ * */
+.contactContainer dt{
+	/*宽  高  背景色 颜色 对齐 显示方式*/
+	width: 100px;
+	/*height: 30px;*/
+	padding: 10px 30px;
+	background-color: #fff;
+	color: #000;
+	text-align: center;
+	/*line-height: 30px;*/
+	display: inline-block;
+}
+.contactContainer dd{
+	padding: 10px 30px;
+	background-color: #000;
+	display: inline-block;
+	margin: 0 50px 0 0;
+}
+.contact input{
+	/*
+	 宽 高 圆角 padding
+	 border outline
+	 * */
+	width:31%;
+	padding: 10px 16px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	margin: 20px 3% 20px 0px;
+}
+.contact select{
+	width:31%;
+	padding: 8px 16px;
+	border-radius: 5px;
+	margin: 20px 0px 20px 0px;
+	border: none;
+	outline: none;
+	color: #888;
+}
+.contact textarea,
+.contact input[type="submit"]{
+	vertical-align: middle;
+	margin: 0px;
 }
