@@ -22,6 +22,9 @@ input{
 	max-width: 1200px;
 	margin: auto;
 }
+body{
+	min-height: 1400px;
+}
 /*
  * header部分
  * */
@@ -29,7 +32,12 @@ header{
 	position: fixed;
 	width: 100%;
 	padding: 20px 0px;
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0);
+	transition:padding .5s,background-color .5s;
+}
+header.on{
+	padding: 5px 0px;
+	background-color: rgba(0,0,0,0.6);
 }
 header a{
 	color: #fff;
