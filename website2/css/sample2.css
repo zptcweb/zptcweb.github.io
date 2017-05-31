@@ -20,6 +20,7 @@ a{
 .container{
 	max-width: 1200px;
 	margin: auto;
+	padding: 1px;
 }
 body{
 	min-height: 1400px;
@@ -68,6 +69,30 @@ header .topMenu a:hover{
  首页banner的设置
  * */
 .banner{
-	min-height: 800px;
+	/*min-height: 800px;*/
 	background: url(../img/banner.jpg) no-repeat center top;
+}
+.banner .text{
+	max-width: 800px;
+	height: 180px;
+	color: #fff;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+	line-height: 1.5;
+} 
+.banner .text h1{
+	text-align: center;
+}
+.banner .text h1 strong{
+	color: #339BEB;
+}
+.banner .text p mark{
+	background-color: rgba(255,255,255,.5);
+	padding: 4px;
+	color: #000;
 }
