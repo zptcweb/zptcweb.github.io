@@ -110,7 +110,7 @@ header .topMenu li a:hover{
  焦点部分
  * */
 .banner{
-    color: #fff;
+    color: #333;
 	background: url(../img/banner.jpg) no-repeat center top;
 	background-size: cover;
 }
@@ -120,7 +120,6 @@ header .topMenu li a:hover{
 	left: 50%;
 	transform: translate(-50%,-50%);
 	text-align: center;
-	text-shadow: 1px 1px 1px rgba(0,0,0,.8);
 }
 .banner .caption h1 span{
 	color: #339BEB;
@@ -131,8 +130,8 @@ header .topMenu li a:hover{
 	font-family: "微软雅黑";
 }
 .banner .caption p em{
-	background-color:rgba(255,255,255,.5);
-	color: #000;
+	background-color:rgba(0,0,0,.2);
+	color: #fff;
 	padding: 2px 4px;
 	font-style: normal;
 	text-shadow: none;
@@ -220,7 +219,7 @@ section h2+p{
 	background: url(../img/banner2.jpg) center center no-repeat;
 	background-size: cover;
 	color: #fff;
-	text-shadow: 1px 1px 0px rgba(0,0,0,.5);
+	/*text-shadow: 1px 1px 0px rgba(0,0,0,.5);*/
 }
 .service li{
 	float: left;

@@ -126,3 +126,98 @@ header .topMenu a:hover{
 	padding: 4px;
 	color: #000;
 }
+/*
+ * 关于我们设置
+ */
+section h2{
+	text-align: center;
+	margin-top: 50px;
+}
+section h2+p{
+	text-align: center;
+	margin-bottom: 80px;
+}
+.about .img{
+	/*
+	 * 宽度 48%
+	 * 左浮动
+	 */
+	width: 48%;
+	float: left;
+}
+.about .img img{
+	width: 100%;
+}
+.about .note{
+	/*
+	 宽度
+	右浮动
+	 * */
+	width: 48%;
+	float: right;
+	line-height: 2;
+}
+.about .note p:first-child{
+	margin-top: 0;
+}
+.about .note ol{
+	padding: 0;
+	list-style: none;
+	counter-reset: a;
+}
+.about .note li{
+	counter-increment: a;
+}
+.about .note li::before{
+	content: counter(a);
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	/*background-color: #000;
+	color: #fff;*/
+	text-align: center;
+	line-height: 20px;
+	border-radius: 20px;
+	border: 1px dashed #000;
+	margin-right: 20px;
+	/*transition: transform .5s;*/
+}
+.about .note li:hover::before{
+	/*transform: translate(10px) rotate(360deg);*/
+	animation: go 2s;
+}
+@keyframes go{
+	0%{
+		transform: translate(20px);
+	}
+	10%{
+		transform: translate(-20px);
+	}
+	20%{
+		transform: translate(15px);
+	}
+	30%{
+		transform: translate(-15px);
+	}
+	40%{
+		transform: translate(10px);
+	}
+	50%{
+		transform: translate(-10px);
+	}
+	60%{
+		transform: translate(5px);
+	}
+	70%{
+		transform: translate(-5px);
+	}
+	80%{
+		transform: translate(3px);
+	}
+	90%{
+		transform: translate(-3px);
+	}
+	100%{
+		transform: translate(0px);
+	}
+}

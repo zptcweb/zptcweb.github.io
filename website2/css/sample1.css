@@ -135,3 +135,60 @@ header .topMenu ul li{
 	font-weight: normal;
 	
 }
+/*
+ * 关于我们的设置
+ * */
+section h2{
+	text-align: center;
+	margin-top: 50px;
+}
+section h2+p{
+	text-align: center;
+	margin-bottom: 80px;
+}
+.about{
+	
+}
+.about .img{
+	float: left;
+	width: 48%;
+}
+.about .img img{
+	width: 100%;
+}
+.about .note{
+	float: right;
+	width: 48%;
+}
+.about .note p{
+	line-height: 2;
+	margin: 20px 0px;
+}
+.about .note p:first-child{
+	margin-top: 0px;
+}
+.about .note ol{
+	list-style: none;
+	line-height: 2;
+	padding: 0;
+	counter-reset: liCounter;
+}
+.about .note li{
+	counter-increment: liCounter;
+}
+.about .note li::before{
+	/*计数器使用*/
+	content: counter(liCounter);
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 20px;
+	border: 1px dashed #000;
+	margin-right: 10px;
+	transition: transform .5s;
+}
+.about .note li:hover::before{
+	transform: translate(10px) rotate(360deg);
+}
