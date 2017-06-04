@@ -153,7 +153,7 @@ section:nth-of-type(2n+3)::before{
 	left: 0;
 	top: 0;
 	z-index: 0;
-	box-shadow: inset 0px 0px 100px 50px rgba(0,0,0,.5);
+	box-shadow: inset 0px 0px 100px 10px rgba(0,0,0,.5);
 }
 section h2{
 	text-align: center;
@@ -216,16 +216,15 @@ section h2+p{
  * */
 .service{
 	min-height: 600px;
-	background: url(../img/banner2.jpg) center center no-repeat;
+	background: url(../img/desktop.jpg) center center no-repeat;
 	background-size: cover;
-	color: #fff;
-	/*text-shadow: 1px 1px 0px rgba(0,0,0,.5);*/
 }
 .service li{
 	float: left;
 	width: 48%;
 	margin-right: 4%;
 	text-align: right;
+	cursor: pointer;
 }
 .service li::after{
 	content: "";
@@ -235,10 +234,16 @@ section h2+p{
 .service li:nth-child(2n){
 	margin-right: 0px;
 	text-align: left;
+	
 }
 .service li i{
 	float: right;
 	padding: 12px 0px 12px 20px;
+	transition: transform .5s,color .5s;
+}
+.service li:hover i{
+	transform: scale(1.2);
+	color: #339BEB;
 }
 .service li:nth-child(2n) i{
 	float: left;
