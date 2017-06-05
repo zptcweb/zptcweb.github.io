@@ -225,6 +225,7 @@ section h2+p{
 	margin-right: 4%;
 	text-align: right;
 	cursor: pointer;
+	min-height: 80px;
 }
 .service li::after{
 	content: "";

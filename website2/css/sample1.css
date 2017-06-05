@@ -192,3 +192,45 @@ section h2+p{
 .about .note li:hover::before{
 	transform: translate(10px) rotate(360deg);
 }
+/*
+ 服务部分
+ * */
+.service{
+	background: url(../img/desktop.jpg) center center;
+	background-size: cover;
+}
+.service li{
+	width: 48%;
+	float: left;
+	text-align: right;
+	line-height: 2;
+	height: 80px;
+	margin: 40px 0px;
+	cursor: pointer;
+}
+.service li::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.service li:nth-child(2n){
+	float: right;
+	text-align: left;
+}
+.service li i{
+	float: right;
+	padding: 12px 0px 5px 30px;
+	transition: transform .5s,color .5s;
+}
+.service li:nth-child(2n) i{
+	float: left;
+	padding: 12px 30px 5px 0px;
+}
+.service li:hover i{
+	color: #339BEB;
+	transform: scale(1.2) rotate(5deg);
+}
+.service li h3{
+	display: inline-block;
+	margin: 0;
+}
