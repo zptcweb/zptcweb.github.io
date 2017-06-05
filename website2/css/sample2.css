@@ -21,6 +21,7 @@ a{
 	max-width: 1200px;
 	margin: auto;
 	padding: 1px;
+	position: relative;
 }
 body{
 	min-height: 1400px;
@@ -220,4 +221,61 @@ section h2+p{
 	100%{
 		transform: translate(0px);
 	}
+}
+/*
+ 服务部分
+ * */
+.service{
+	background: url(../img/desktop.jpg) center center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.service .container{
+	z-index: 2;
+}
+.service::after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*background-color: rgba(0,0,0,.3);*/
+	box-shadow: inset 0px 0px 100px 50px rgba(0,0,0,.5);
+	z-index: 1;
+}
+.service li{
+	width: 48%;
+	float: left;
+	text-align: right;
+	min-height: 100px;
+	margin: 20px 0px;
+	cursor: pointer;
+}
+.service li::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.service li:nth-child(2n){
+	float: right;
+	text-align: left;
+}
+.service li i{
+	float: right;
+	padding: 5px 0px 5px 30px;
+	transition: transform .5s, color .5s;
+}
+
+.service li:nth-child(2n) i{
+	float: left;
+	padding: 5px 30px 5px 0px;
+}
+.service li:hover i{
+	color: #339BEB;
+	transform: scale(1.2) rotate(5deg);
+}
+.service li h3{
+	display: inline-block;
+	margin: 0;
 }
