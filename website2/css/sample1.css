@@ -103,6 +103,10 @@ header .topMenu ul li{
 	float: left;
 	margin: 0px 30px;
 }
+header .topMenu ul li:hover a,
+header .topMenu ul li.active a{
+	color: #339BEB;
+}
 /*
  * banner
  * */
@@ -138,6 +142,9 @@ header .topMenu ul li{
 /*
  * 关于我们的设置
  * */
+section{
+	min-height: 600px;
+}
 section h2{
 	text-align: center;
 	margin-top: 50px;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>企业官方网站</title>
@@ -7,12 +8,13 @@
 			1.重置 2.图标字体 3.google字体（特殊字体）4.自己的CSS
 			开发的时候，优先使用本地文件。发布的时候优先使用CDN的方式。
 		-->
-		<link rel="stylesheet" type="text/css" href="css/normalize.min.css"/>
-		<link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/normalize.min.css" />
+		<link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css" />
 		<!--<link href='//fonts.googlefonts.net/css?family=Poiret+One|Lobster|Dancing+Script' rel='stylesheet' type='text/css'>-->
-		<link rel="stylesheet" type="text/css" href="css/sample2.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sample2.css" />
 		<link rel="icon" href="img/icon.ico" />
 	</head>
+
 	<body>
 		<!--头部-->
 		<header class="fixed">
@@ -20,17 +22,27 @@
 			<div class="container clearfix">
 				<div class="logo">
 					<a href="#banner">
-						<img src="img/logo.png"/>
+						<img src="img/logo.png" />
 						<span>Worthy</span>
 					</a>
 				</div>
-				<nav class="topMenu">
-					<ul class="clearfix">
-						<li><a href="#banner">首页</a></li>
-						<li><a href="#about">关于</a></li>
-						<li><a href="#service">服务</a></li>
-						<li><a href="#case">案例</a></li>
-						<li><a href="#contact">联系</a></li>
+				<nav class="topMenu scrollspy">
+					<ul class="nav clearfix">
+						<li class="active">
+							<a href="#banner">首页</a>
+						</li>
+						<li>
+							<a href="#about">关于</a>
+						</li>
+						<li>
+							<a href="#service">服务</a>
+						</li>
+						<li>
+							<a href="#case">案例</a>
+						</li>
+						<li>
+							<a href="#contact">联系</a>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -44,9 +56,9 @@
 					<div class="text">
 						<h1>We are <strong>worthy</strong></h1>
 						<p>Worthy是专业的<mark>全媒体信息服务提供商</mark>，可以为您全媒体的企业展示、产品推广、活动策划等系列服务，包括纸媒、传统数媒、移动互联网等多渠道、多方式、全方位的形象设计、营销与推广。</p>
-						<p>欢迎致电垂询！</p>	
+						<p>欢迎致电垂询！</p>
 					</div>
-						
+
 					<!--margin塌陷-->
 					<!--
 						当父元素没有padding和border的时候，子元素的竖直方向的 margin将会应用在父盒子上
@@ -60,7 +72,7 @@
 					<h2>关于我们</h2>
 					<p>旨为您能更好，只为更好的您！！</p>
 					<div class="img">
-						<img src="img/worthy.png"/>
+						<img src="img/worthy.png" />
 					</div>
 					<div class="note">
 						<p>
@@ -79,52 +91,111 @@
 			<!--关于结束------------->
 			<!--服务开始-->
 			<section class="service" id="service">
-			<div class="container clearfix">
-				<h2>我们的服务</h2>
-				<p>竭诚为您服务</p>
-				<ul class="content clearfix">
-					<li>
-						<i class="fa fa-cog"></i>
-						<h3>高端定制网站建设</h3>
-						<p>专业定制高端网站，品牌官网、集团网站、营销网站、响应式网站、电子商务网站、业务系统定制等</p>
-					</li>
-					<li>
-						<i class="fa fa-leaf"></i>
-						<h3>移动互联网解决方案</h3>
-						<p>专业手机网站开发、H5页面开发、APP开发、业务APP定制开发，面向手机、平板等多终端的移动互联网解决方案等</p>
-					</li>
-					<li>
-						<i class="fa fa-check"></i>
-						<h3>微信开发运营</h3>
-						<p>微官网建设、PC网站和移动端网站资源整合、微信公众号开发运营、H5社交游戏开发等</p>
-					</li>
-					<li>
-						<i class="fa fa-area-chart"></i>
-						<h3>交互体验设计</h3>
-						<p>360度全景展示、VR虚拟现实、AR增强现实等。</p>
-					</li>
-					<li>
-						<i class="fa fa-desktop"></i>
-						<h3>网站运维</h3>
-						<p>数据灾备服务、系统安装服务、内容维护、技术迭代服务、服务代维等。</p>
-					</li>
-					<li>
-						<i class="fa fa-codepen"></i>
-						<h3>影像创意服务</h3>
-						<p>通过图像与视频创新应用塑造饱满、立体、鲜活的品牌形象，品牌形象摄影、产品摄影、影视拍摄与制作等。</p>
-					</li>
-				</ul>
-			</div>
-		</section>
+				<div class="container clearfix">
+					<h2>我们的服务</h2>
+					<p>竭诚为您服务</p>
+					<ul class="content clearfix">
+						<li>
+							<i class="fa fa-cog"></i>
+							<h3>高端定制网站建设</h3>
+							<p>专业定制高端网站，品牌官网、集团网站、营销网站、响应式网站、电子商务网站、业务系统定制等</p>
+						</li>
+						<li>
+							<i class="fa fa-leaf"></i>
+							<h3>移动互联网解决方案</h3>
+							<p>专业手机网站开发、H5页面开发、APP开发、业务APP定制开发，面向手机、平板等多终端的移动互联网解决方案等</p>
+						</li>
+						<li>
+							<i class="fa fa-check"></i>
+							<h3>微信开发运营</h3>
+							<p>微官网建设、PC网站和移动端网站资源整合、微信公众号开发运营、H5社交游戏开发等</p>
+						</li>
+						<li>
+							<i class="fa fa-area-chart"></i>
+							<h3>交互体验设计</h3>
+							<p>360度全景展示、VR虚拟现实、AR增强现实等。</p>
+						</li>
+						<li>
+							<i class="fa fa-desktop"></i>
+							<h3>网站运维</h3>
+							<p>数据灾备服务、系统安装服务、内容维护、技术迭代服务、服务代维等。</p>
+						</li>
+						<li>
+							<i class="fa fa-codepen"></i>
+							<h3>影像创意服务</h3>
+							<p>通过图像与视频创新应用塑造饱满、立体、鲜活的品牌形象，品牌形象摄影、产品摄影、影视拍摄与制作等。</p>
+						</li>
+					</ul>
+				</div>
+			</section>
 			<!--服务结束------------->
 			<!--案例开始-->
 			<section id="case" class="case">
-				
+				<div class="container">
+					<h2>成功案例</h2>
+					<p>截止目前，我们先后主导开发了各类各式项目2345个，本栏目展示其中代表性的成功案例，看更多。</p>
+					<div class="content clearfix">
+						<figure>
+							<img src="img/work.jpg" alt="" />
+							<figcaption>
+								<div class="time">
+									<span class="month">6月</span>
+									<span class="year">2017</span>
+								</div>
+								<h3>项目标题</h3>
+								<p>项目介绍项目介绍项目介绍项目介绍项目介绍</p>
+								<div class="data">
+									<span class="view"><i class="fa fa-eye"></i>1234</span>
+									<span class="star"><i class="fa fa-heart"></i>234</span>
+									<span class="comment"><i class="fa fa-comments"></i>78</span>
+								</div>
+							</figcaption>
+						</figure>
+						<figure>
+							<img src="img/work.jpg" alt="" />
+							<figcaption>随便来点字，我待会儿替换</figcaption>
+						</figure>
+						<figure>
+							<img src="img/work.jpg" alt="" />
+							<figcaption>随便来点字，我待会儿替换</figcaption>
+						</figure>
+						<figure>
+							<img src="img/work.jpg" alt="" />
+							<figcaption>随便来点字，我待会儿替换</figcaption>
+						</figure>
+						<figure>
+							<img src="img/work.jpg" alt="" />
+							<figcaption>随便来点字，我待会儿替换</figcaption>
+						</figure>
+						<figure>
+							<img src="img/work.jpg" alt="" />
+							<figcaption>随便来点字，我待会儿替换</figcaption>
+						</figure>
+						<figure>
+							<img src="img/work.jpg" alt="" />
+							<figcaption>随便来点字，我待会儿替换</figcaption>
+						</figure>
+						<figure>
+							<img src="img/work.jpg" alt="" />
+							<figcaption>随便来点字，我待会儿替换</figcaption>
+						</figure>
+						<figure>
+							<img src="img/work.jpg" alt="" />
+							<figcaption>随便来点字，我待会儿替换</figcaption>
+						</figure>
+						<figure>
+							<img src="img/work.jpg" alt="" />
+							<figcaption>随便来点字，我待会儿替换</figcaption>
+						</figure>
+					</div>
+				</div>
 			</section>
 			<!--案例结束------------->
 			<!--联系开始-->
 			<section id="contact" class="contact">
-				
+				<div class="container">
+					<h2>联系我们</h2>
+				</div>
 			</section>
 			<!--联系结束------------->
 		</main>
@@ -133,6 +204,8 @@
 		<footer></footer>
 		<!--脚部结束----------------->
 		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
 	</body>
+
 </html>

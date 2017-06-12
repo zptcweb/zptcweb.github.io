@@ -1,0 +1,186 @@
+/*
+	common公共类
+*/
+*{
+	box-sizing:border-box;
+}
+.clearfix::after{
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	clear: both;
+}
+.center{
+	width: 1000px;
+	margin: auto;
+	position: relative;
+}
+ul,ol{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+}
+	
+/*
+	header部分
+*/
+.header .logo{
+	float: left;
+	margin: 8px 0;
+}
+.header .menu{
+	float: right;
+	position: relative;
+}
+.header .menu li{
+	float: left;
+	width: 100px;
+	text-align: center;
+    height: 80px;
+    line-height: 80px;
+    position: relative;
+    border-right: 1px solid #EEE;
+}
+.header .menu li a{
+	color: #333;
+}
+.header .menu li:first-child{
+	border-left: 1px solid #EEE;
+}
+.header .menu li a:hover {
+    color: #388ddf;
+    text-decoration: none;
+}
+.header .menu li.top{
+	width: 100px;
+	height: 3px;
+	background:  #388ddf;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition:all .5s;
+}
+.header .menu li:nth-child(2):hover~li.top{
+	left: 100px;
+}
+.header .menu li:nth-child(3):hover~li.top{
+	left: 200px;
+}
+.header .menu li:nth-child(4):hover~li.top{
+	left: 300px;
+}
+.header .menu li:nth-child(5):hover~li.top{
+	left: 400px;
+}
+/*
+	banner部分
+*/
+.banner{
+	height: 454px;
+	background:url(../images/banner2.jpg) center top no-repeat;
+	background-size: 100%;
+	color: #ddd;
+}
+.banner .center{
+	padding: 70px 0 0 515px;
+}
+.banner h2.title{
+	font-family: "微软雅黑";
+	font-weight: normal;
+	font-size: 24px;
+	margin-bottom: 80px;
+}
+.banner a.download{
+	display: block;
+	width: 243px;
+    height: 76px;
+    background: url(../images/download.png) no-repeat;
+}
+.banner a.download:hover{
+	background-position: 0 -152px;
+}
+.banner a{
+	color: #fff;
+}
+.banner a:hover{
+	text-decoration: underline;
+}
+/*
+	figure 部分
+*/
+.figure{
+	margin: 30px auto;
+}
+.figure li{
+	float: left;
+	width:300px;
+	height: 168px;
+	position: relative;
+	margin-right: 50px;
+	overflow: hidden;
+}
+.figure li:last-child{
+	margin-right: 0;
+}
+.figure li img{
+	width: 100%;
+	position: relative;
+	top: 0;
+	transition:all .5s;
+}
+.figure li .title{
+	width: 100%;
+	height: 30px;
+	color: rgba(255,255,255,.9);
+	background:rgba(255,255,255,.2);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	line-height: 30px;
+}
+.figure li:hover img{
+	top: -10px;
+}
+/*
+	news部分
+*/
+.news,.link{
+	border-top: 1px solid rgba(0,0,0,.1);
+	margin: 30px auto;
+}
+.news .title,.link .title{
+	margin: 10px;
+	padding: 0 10px;
+	border-left: 2px solid #388ddf;
+}
+.news li,.link li{
+	float: left;
+	width: 25%;
+	padding: 10px;
+}
+.link li{
+	width: 10%;
+}
+.news li a,.link li a{
+	color: #222;
+	font-size: 12px;
+}
+.footer{
+	text-align: center;
+	font-size: 14px;
+	color: #999;
+	margin: 10px 0;
+}
+.footer a{
+	color: #222;
+	font-size: 14px;
+}
+.footer a:hover{
+	text-decoration: underline;
+}

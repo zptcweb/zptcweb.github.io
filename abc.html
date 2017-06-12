@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			figure{
+				width: 300px;
+				margin: 100px;
+				position: relative;
+				overflow: hidden;
+				border: 1px solid #000;
+			}
+			figure img{
+				width: 100%;
+				height: auto;
+				transition: transform .5s ease-out;
+				vertical-align: top;
+			}
+			figure:hover img{
+				transform: translate(-30px,40px) rotate(30deg);
+				/*
+				 CSS的优先级的问题
+				 * */
+			}
+			figcaption{
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			hover谁   figure
+			谁做变化     img
+			之间的通道   img是figure的子元素
+			
+		-->
+		<figure>
+			<img src="image/img/01.jpg" alt="" />
+			<figcaption>图像标题</figcaption>
+		</figure>
+	</body>
+</html>
